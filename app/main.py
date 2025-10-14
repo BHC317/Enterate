@@ -2,7 +2,7 @@ from fastapi import FastAPI, Depends
 from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
-from routers import movies
+from routers import movies, routes
 from logger import log
 from sqlalchemy.orm import Session
 from database import Base, engine, get_db
@@ -26,6 +26,7 @@ app = FastAPI(
 )
 
 app.include_router(movies.router)
+app.include_router(routes.router)
 
 @app.get("/customers")
 def list_customers(db: Session = Depends(get_db)):
