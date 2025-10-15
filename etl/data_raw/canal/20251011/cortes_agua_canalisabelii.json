@@ -1,0 +1,24 @@
+[
+  {
+    "event_id": "agua-20251011-00002",
+    "tipo": "avería",
+    "programado": false,
+    "direccion": "CALLE MANUEL FERRERO, 7, MADRID",
+    "lat": 40.46865965653807,
+    "lon": -3.6845881440541053,
+    "start_ts": "2025-10-11T18:01",
+    "end_ts": null,
+    "mensaje": "Se ha producido una incidencia en la red de distribución para cuya reparación se ha tenido que interrumpir el suministro. le comunicamos que esperamos tenerlo resuelto sobre las 01:30. lamentamos las molestias ocasionadas."
+  },
+  {
+    "event_id": "agua-20251011-00003",
+    "tipo": "mantenimiento",
+    "programado": false,
+    "direccion": "AVDA CANILLEJAS A VICALVARO, 102, MADRID",
+    "lat": 40.41622523370595,
+    "lon": -3.6109777077456386,
+    "start_ts": "2025-10-06T09:04",
+    "end_ts": "2025-12-26T13:04",
+    "mensaje": "Se está ejecutando un trabajo en la red de distribución que permitirá mejorar la calidad del servicio que se presta en su zona. el corte de suministro ha sido anunciado mediante carteles. lamentamos las molestias ocasionadas."
+  }
+]
