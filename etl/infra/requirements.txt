@@ -1,0 +1,7 @@
+requests
+beautifulsoup4
+lxml
+pdfplumber
+selenium
+webdriver-manager
+python-dotenv
