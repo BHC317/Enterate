@@ -1,22 +1,22 @@
 
 from fastapi import APIRouter, Depends, Query
 from core.security import require_api_key
-from models import RouteRequest, RouteAnalysisResponse
-from models import Coordinate
-from models import Incident
+from models.models import RouteRequest, RouteAnalysisResponse
+from models.models import Coordinate
+from models.models import Incident
 from services.logistics import LogisticsService
 
 '''
 Functionality with Logistics API
 '''
 
-router = APIRouter(tags=["v1","routes"], prefix="/routes")
+router = APIRouter(tags=["v1","logistics"], prefix="/routes")
 
-@router.post("/logistics/routes/analyze", response_model=RouteAnalysisResponse, tags=["logistics", "routes"])
+@router.post("/logistics/routes/analyze", response_model=RouteAnalysisResponse, tags=["logistics"])
 async def analyze_route(payload: RouteRequest, _=Depends(require_api_key)):
     return LogisticsService.analyze_route(payload)
 
-@router.get("/incidents/nearby", response_model=dict, tags=["incidents"])
+@router.get("/incidents/nearby", response_model=dict, tags=["logistics"])
 async def get_nearby_incidents(
     lat: float = Query(..., ge=-90, le=90),
     lng: float = Query(..., ge=-180, le=180),

@@ -6,7 +6,7 @@ from routers import movies, routes
 from logger import log
 from sqlalchemy.orm import Session
 from database import Base, engine, get_db
-from models import Customer
+from models.models import Customer
 
 descripcion = "Enterate: API REST"
     
@@ -19,8 +19,8 @@ app = FastAPI(
         "url": "https://www.gnu.org/licenses/gpl-3.0.en.html", 
     }, 
     openapi_tags= [ {
-                        "name": "movies",
-                        "description": "Operaciones CRUD sobre películas"
+                        "name": "Enterate API",
+                        "description": "Enterate API"
                     }                   
                 ]
 )

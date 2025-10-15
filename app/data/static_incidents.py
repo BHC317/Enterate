@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 # from ..models.incident import Incident
 # from ..models.geo import Coordinate
-from models import Incident, Coordinate
+from models.models import Incident, Coordinate
 
 NOW = datetime.utcnow()
 
@@ -26,8 +26,8 @@ STATIC_INCIDENTS: list[Incident] = [
         location=Coordinate(lat=18.4729, lng=-69.9216),
         radius_m=180,
         severity="high",
-        start_time=NOW - timedelta(hours=1),
-        end_time=NOW + timedelta(hours=1),
+        start_time=NOW - timedelta(hours=2),
+        end_time=NOW + timedelta(hours=4),
         source="official",
     ),
     Incident(
