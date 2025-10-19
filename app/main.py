@@ -2,7 +2,7 @@ from fastapi import FastAPI, Depends
 from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
-from routers import movies, routes
+from routers import routes, routes_ads, incidents
 from logger import log
 from sqlalchemy.orm import Session
 from database import Base, engine, get_db
@@ -25,17 +25,17 @@ app = FastAPI(
                 ]
 )
 
-app.include_router(movies.router)
 app.include_router(routes.router)
+app.include_router(routes_ads.router)
+app.include_router(incidents.router)
 
-@app.get("/customers")
-def list_customers(db: Session = Depends(get_db)):
-    customers = db.query(Customer).all()
-
-    return [
-        {"id": c.id, "name": c.name, "email": c.email}
-        for c in customers
-    ]
+@app.on_event("startup")
+def init_db():
+    with engine.begin() as conn:
+        conn.exec_driver_sql("CREATE EXTENSION IF NOT EXISTS postgis")
+        conn.exec_driver_sql("CREATE SCHEMA IF NOT EXISTS core")
+    # Crear tablas si no existen (al cargar el módulo)
+    Base.metadata.create_all(bind=engine)
 
 @app.get("/", include_in_schema=False)
 def redirigir():
