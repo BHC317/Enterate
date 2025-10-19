@@ -15,9 +15,6 @@ from models.schemas_ads import (
 
 router = APIRouter(prefix="", tags=["ads"])
 
-# Crear tablas si no existen (al cargar el módulo)
-Base.metadata.create_all(bind=engine)
-
 # ---------------- PLANES ----------------
 @router.post("/plans", response_model=PlanOut)
 def create_plan(payload: PlanCreate, db: Session = Depends(get_db)):
