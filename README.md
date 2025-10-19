@@ -7,39 +7,12 @@ Repositorio de un proyecto de **Ingeniería de Datos** que combina:
 
 ## Tabla de contenidos
 
-1. [Arquitectura](#arquitectura)
-2. [Requisitos](#requisitos)
-4. [Variables de entorno](#variables-de-entorno)
-5. [Puesta en marcha (Docker Compose)](#puesta-en-marcha-docker-compose)
-6. [API (FastAPI)](#api-fastapi)
-7. [Base de datos (PostgreSQL)](#base-de-datos-postgresql)
-8. [ETL con dbt](#etl-con-dbt)
-
----
-
-## Arquitectura
-
-```
-┌───────────┐        requests         ┌─────────────┐
-│  Cliente  ├────────────────────────▶│   FastAPI   │
-└───────────┘                         │ (app/)      │
-                                      └─────┬───────┘
-                                            │ SQL (read/write)
-                                            ▼
-                                      ┌─────────────┐
-                                      │ PostgreSQL  │
-                                      │ (docker)    │
-                                      └─────┬───────┘
-                                            │
-                              cargas (dbt)  ▼
-                                      ┌─────────────┐
-                                      │   ETL/dbt   │
-                                      │ (etl/)      │
-                                      └─────────────┘
-```
-
-- La **API** consulta tablas materializadas por el **ETL**.  
-- El **ETL (dbt)** carga y transforma datos en el **mismo PostgreSQL**.
+1. [Requisitos](#requisitos)
+2. [Variables de entorno](#variables-de-entorno)
+3. [Puesta en marcha (Docker Compose)](#puesta-en-marcha-docker-compose)
+4. [API (FastAPI)](#api-fastapi)
+5. [Base de datos (PostgreSQL)](#base-de-datos-postgresql)
+6. [ETL con dbt](#etl-con-dbt)
 
 ---
 
