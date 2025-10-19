@@ -1,8 +1,9 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import TIMESTAMP, CheckConstraint, Column, Float, Integer, String, Text
 from database import Base
 from pydantic import BaseModel, Field, conlist, validator, field_validator
 from typing import Literal, List, Optional
 from datetime import datetime
+from schemas.schemas import IncidentSchema
 
 class Customer(Base):
     __tablename__ = "customers"
@@ -25,20 +26,29 @@ class VehicleInfo(BaseModel):
     width_m: float | None = Field(None, ge=0)
     height_m: float | None = Field(None, ge=0)
 
-class Incident(BaseModel):
-    id: str
-    type: Literal[
-    "accident", "roadwork", "protest", "flood", "power_outage",
-    "police_activity", "event", "traffic_jam", "roadblock"
-    ]
-    title: str
-    description: str | None = None
-    location: Coordinate
-    radius_m: int = 150
-    severity: Literal["low", "medium", "high", "critical"] = "medium"
-    start_time: datetime | None = None
-    end_time: datetime | None = None
-    source: Literal["official", "citizen", "media", "sensor"] = "official"
+class Incident(Base):
+    __tablename__ = "fact_incident"
+    __table_args__ = (
+        CheckConstraint("source IN ('gas', 'ayto', 'ide', 'canal')"),
+        CheckConstraint("category IN ('gas', 'road', 'electricity', 'water')"),
+        CheckConstraint("status IN ('planned', 'active', '1')"),
+        {"schema": "core"},
+    )
+
+    fingerprint = Column(String(100), primary_key=True, index=True)
+    source = Column(String(10), nullable=False)
+    category = Column(String(15), nullable=False)
+    status = Column(String(10), nullable=False)
+    city = Column(String(100), nullable=False)
+    street = Column(String(255), nullable=True)
+    street_number = Column(String(20), nullable=True)
+    lat = Column(Float, nullable=False)
+    lon = Column(Float, nullable=False)
+    start_ts_utc = Column(TIMESTAMP(timezone=True), nullable=False)
+    end_ts_utc = Column(TIMESTAMP(timezone=True), nullable=True)
+    description = Column(Text, nullable=True)
+    event_id = Column(String(100), nullable=True)
+    ingested_at_utc = Column(TIMESTAMP(timezone=True), nullable=False)
 
 class Recommendation(BaseModel):
     id: str
@@ -78,7 +88,7 @@ class RouteAnalysisResponse(BaseModel):
     eta_min: int
     eta_with_incidents_min: int
     expected_delay_min: int
-    incidents: List[Incident]
+    incidents: List[IncidentSchema]
     affected_segments: List[AffectedSegment]
     recommendations: List[Recommendation]
     alternatives: List[AlternativeRoute]
