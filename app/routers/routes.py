@@ -10,9 +10,9 @@ from services.logistics import LogisticsService
 Functionality with Logistics API
 '''
 
-router = APIRouter(tags=["v1","logistics"], prefix="/routes")
+router = APIRouter(tags=["logistics"], prefix="/routes")
 
-@router.post("/logistics/routes/analyze", response_model=RouteAnalysisResponse, tags=["logistics"])
+@router.post("/analyze", response_model=RouteAnalysisResponse, tags=["logistics"])
 async def analyze_route(payload: RouteRequest, _=Depends(require_api_key)):
     return LogisticsService.analyze_route(payload)
 
