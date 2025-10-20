@@ -1,0 +1,13 @@
+name: "enterate"
+version: "1.0"
+profile: "enterate"
+model-paths: ["models"]
+
+models:
+  enterate:
+    staging:
+      +schema: staging
+      +materialized: view
+    marts:
+      +schema: analytics
+      +materialized: table
