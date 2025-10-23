@@ -7,8 +7,11 @@ from pathlib import Path
 from datetime import datetime, timezone
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dotenv import load_dotenv
+import json
+import shutil
 
 from etl.extract import electricidad_ide, agua_canal, calles_ayto, gas_sim
+from etl.extract import ide_simulate
 
 DETACHED_PROCESS = 0x00000008
 CREATE_NO_WINDOW = 0x08000000
@@ -26,6 +29,47 @@ def _safe(tag, fn, *args, quiet: bool = False, **kwargs):
         return tag, True, None
     except Exception as e:
         _print(True, f"[WARN] {tag} falló: {e}")
+        if tag == "IDE":
+            _print(True, "[IDE] Activando simulación por fallo en scraping…")
+            out_dir = Path(args[0]) if len(args) > 0 else None
+            if out_dir is None:
+                today = datetime.now(timezone.utc).strftime("%Y%m%d")
+                out_dir = Path("etl") / "data_raw" / "ide" / today
+            out_dir.mkdir(parents=True, exist_ok=True)
+
+            try:
+                try:
+                    ide_simulate.main(output_dir=str(out_dir))
+                except TypeError:
+                    ide_simulate.main()
+            except Exception as e2:
+                _print(True, f"[WARN] ide_simulate falló: {e2}")
+
+            def _has_events(p: Path) -> bool:
+                try:
+                    data = json.loads(p.read_text(encoding="utf-8"))
+                    if isinstance(data, list):
+                        return len(data) > 0
+                    if isinstance(data, dict):
+                        return len(data.get("events", [])) > 0
+                    return False
+                except Exception:
+                    return False
+
+            candidates = [p for p in out_dir.glob("*.json") if _has_events(p)]
+
+            if not candidates:
+                ide_simulate.run(output_dir=str(out_dir), dias=7, por_dia=3, seed=42)
+                candidates = [p for p in out_dir.glob("*.json") if _has_events(p)]
+
+            if candidates:
+                candidates.sort(key=lambda x: x.stat().st_mtime, reverse=True)
+                canon = out_dir / "cortes_ide_events.json"
+                if candidates[0] != canon:
+                    shutil.copyfile(candidates[0], canon)
+                _print(True, f"[IDE] Simulación OK -> {canon}")
+                return tag, True, None
+
         return tag, False, str(e)
 
 

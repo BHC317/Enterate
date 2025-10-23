@@ -1,0 +1,123 @@
+[
+  {
+    "event_id": "agua-20251022-00017",
+    "tipo": "mantenimiento",
+    "programado": false,
+    "direccion": "AVDA ARAGON, 404, MADRID",
+    "lat": 40.44689861837382,
+    "lon": -3.539015938421649,
+    "start_ts": "2025-10-20T11:14",
+    "end_ts": "2025-10-24T17:14",
+    "mensaje": "Se está ejecutando un trabajo en la red de distribución que permitirá mejorar la calidad del servicio que se presta en su zona. el corte de suministro ha sido anunciado mediante carteles. lamentamos las molestias ocasionadas."
+  },
+  {
+    "event_id": "agua-20251022-00018",
+    "tipo": "mantenimiento",
+    "programado": false,
+    "direccion": "   MADRID",
+    "lat": 40.39525549808234,
+    "lon": -3.640316915284151,
+    "start_ts": "2025-10-16T08:15",
+    "end_ts": "2026-02-20T14:15",
+    "mensaje": "Se está ejecutando un trabajo en la red de distribución que permitirá mejorar la calidad del servicio que se presta en su zona. el corte de suministro ha sido anunciado mediante carteles. lamentamos las molestias ocasionadas."
+  },
+  {
+    "event_id": "agua-20251022-00019",
+    "tipo": "mantenimiento",
+    "programado": false,
+    "direccion": "AVDA ANDALUCIA,  MADRID",
+    "lat": 40.33244014735888,
+    "lon": -3.6925450589374065,
+    "start_ts": "2025-10-22T10:00",
+    "end_ts": "2026-01-14T12:30",
+    "mensaje": "Se está ejecutando un trabajo en la red de distribución que permitirá mejorar la calidad del servicio que se presta en su zona. el corte de suministro ha sido anunciado mediante carteles. lamentamos las molestias ocasionadas."
+  },
+  {
+    "event_id": "agua-20251022-00020",
+    "tipo": "mantenimiento",
+    "programado": false,
+    "direccion": "AVDA ANDALUCIA,  MADRID",
+    "lat": 40.33244014735888,
+    "lon": -3.6925450589374065,
+    "start_ts": "2025-10-22T09:30",
+    "end_ts": "2026-01-14T11:30",
+    "mensaje": "Se está ejecutando un trabajo en la red de distribución que permitirá mejorar la calidad del servicio que se presta en su zona. el corte de suministro ha sido anunciado mediante carteles. lamentamos las molestias ocasionadas."
+  },
+  {
+    "event_id": "agua-20251022-00021",
+    "tipo": "mantenimiento",
+    "programado": false,
+    "direccion": "CALLE ALUCAS, 6, MADRID",
+    "lat": 40.43261890693203,
+    "lon": -3.636544777672071,
+    "start_ts": "2025-10-23T09:00",
+    "end_ts": "2025-10-23T15:00",
+    "mensaje": "Se va a ejecutar un trabajo en la red de distribución que permitirá mejorar  la calidad del servicio que se presta en su zona. se realizará un  corte de suministro  anunciado mediante carteles. lamentamos las molestias ocasionadas."
+  },
+  {
+    "event_id": "agua-20251022-00022",
+    "tipo": "mantenimiento",
+    "programado": false,
+    "direccion": "CALLE SAMBARA, 5, MADRID",
+    "lat": 40.43392831682991,
+    "lon": -3.6553385609114786,
+    "start_ts": "2025-10-23T09:00",
+    "end_ts": "2025-10-23T15:00",
+    "mensaje": "Se va a ejecutar un trabajo en la red de distribución que permitirá mejorar  la calidad del servicio que se presta en su zona. se realizará un  corte de suministro  anunciado mediante carteles. lamentamos las molestias ocasionadas."
+  },
+  {
+    "event_id": "agua-20251022-00023",
+    "tipo": "mantenimiento",
+    "programado": true,
+    "direccion": "   MADRID",
+    "lat": 40.42916762366898,
+    "lon": -3.684010686769098,
+    "start_ts": "2025-10-24T09:00",
+    "end_ts": "2025-10-24T18:00",
+    "mensaje": "Se va a ejecutar un trabajo en la red de distribución que permitirá mejorar  la calidad del servicio que se presta en su zona. se realizará un  corte de suministro  anunciado mediante carteles. lamentamos las molestias ocasionadas."
+  },
+  {
+    "event_id": "agua-20251022-00024",
+    "tipo": "avería",
+    "programado": false,
+    "direccion": "AVDA ARAGON, 361, MADRID",
+    "lat": 40.44725503639454,
+    "lon": -3.5340424164886977,
+    "start_ts": "2025-10-22T14:41",
+    "end_ts": null,
+    "mensaje": "Se ha producido una incidencia en la red de distribución para cuya reparación se ha tenido que interrumpir el suministro. le comunicamos que esperamos tenerlo resuelto sobre las 09:30. lamentamos las molestias ocasionadas."
+  },
+  {
+    "event_id": "agua-20251022-00025",
+    "tipo": "mantenimiento",
+    "programado": false,
+    "direccion": "AVDA ANDALUCIA,  MADRID",
+    "lat": 40.33244014735888,
+    "lon": -3.6925450589374065,
+    "start_ts": "2025-10-20T10:00",
+    "end_ts": "2026-01-14T14:30",
+    "mensaje": "Se está ejecutando un trabajo en la red de distribución que permitirá mejorar la calidad del servicio que se presta en su zona. el corte de suministro ha sido anunciado mediante carteles. lamentamos las molestias ocasionadas."
+  },
+  {
+    "event_id": "agua-20251022-00026",
+    "tipo": "mantenimiento",
+    "programado": false,
+    "direccion": "CALLE AMPOSTA,  MADRID",
+    "lat": 40.421800901399834,
+    "lon": -3.6179358432686834,
+    "start_ts": "2025-10-23T09:00",
+    "end_ts": "2025-10-23T15:00",
+    "mensaje": "Se va a ejecutar un trabajo en la red de distribución que permitirá mejorar  la calidad del servicio que se presta en su zona. se realizará un  corte de suministro  anunciado mediante carteles. lamentamos las molestias ocasionadas."
+  },
+  {
+    "event_id": "agua-20251022-00030",
+    "tipo": "mantenimiento",
+    "programado": false,
+    "direccion": "   ROZAS DE MADRID (LAS)",
+    "lat": 40.521807825136456,
+    "lon": -3.8936692460748374,
+    "start_ts": "2025-10-23T09:00",
+    "end_ts": "2025-10-23T14:00",
+    "mensaje": "Se ha ejecutado un trabajo en la red de distribución que permitirá mejorar la calidad del servicio que se presta en su zona. se ha procedido a restablecer el suministro. lamentamos las molestias ocasionadas."
+  }
+]

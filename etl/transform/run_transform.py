@@ -400,13 +400,13 @@ def _unify_ayto(rec: Dict) -> Dict:
     return out
 
 def _unify_gas(rec: Dict) -> Dict:
-    street = rec.get("street") or rec.get("direccion")
-    number = rec.get("street_number") or rec.get("numero")
+    street = rec.get("via") or rec.get("street") or rec.get("direccion")
+    number = rec.get("numero") or rec.get("street_number")
     lat = _to_float(rec.get("lat"))
     lon = _to_float(rec.get("lon"))
-    start_iso = _to_utc_iso(rec.get("start_ts_utc") or rec.get("start"))
-    end_iso = _to_utc_iso(rec.get("end_ts_utc") or rec.get("end"))
-    status = str(rec.get("status") or "planned")
+    start_iso = _to_utc_iso(rec.get("start_ts_utc") or rec.get("start_ts") or rec.get("start"))
+    end_iso   = _to_utc_iso(rec.get("end_ts_utc")   or rec.get("end_ts")   or rec.get("end"))
+    status = str(rec.get("status") or ("planned" if rec.get("programado") else "unplanned"))
     out = {
         "source": "gas",
         "category": "gas",
@@ -418,11 +418,109 @@ def _unify_gas(rec: Dict) -> Dict:
         "lon": lon,
         "start_ts_utc": start_iso,
         "end_ts_utc": end_iso,
-        "description": rec.get("descripcion"),
+        "description": rec.get("descripcion") or rec.get("mensaje"),
         "event_id": rec.get("event_id"),
         "ingested_at_utc": _now_utc_iso()
     }
     out["fingerprint"] = _fp(out["city"], out["street"], out["street_number"], out["category"], out["source"], out["start_ts_utc"])
+    return out
+
+def _rev_gc_db():
+    CACHE.mkdir(parents=True, exist_ok=True)
+    cx = sqlite3.connect(CACHE / "geocode.sqlite")
+    cx.execute("""
+    create table if not exists revgc(
+        lat real,
+        lon real,
+        street text,
+        number text,
+        primary key(lat,lon)
+    )
+    """)
+    cx.commit()
+    return cx
+
+def _normalize_via_name(v: Optional[str]) -> Optional[str]:
+    if not v:
+        return None
+    s = str(v).strip()
+    s = re.sub(r"\s+", " ", s)
+    words = s.split(" ")
+    lower_keep = {"de","del","la","las","el","los","y","a","al","da","do","dos","das"}
+    norm = []
+    for i,w in enumerate(words):
+        ww = w.lower()
+        if i>0 and ww in lower_keep:
+            norm.append(ww)
+        else:
+            norm.append(ww.capitalize() if len(ww)>2 else ww.upper())
+    out = " ".join(norm)
+    out = re.sub(r"^P[oº]\.?\s*", "Pº ", out)
+    out = re.sub(r"^Avda\.?\s*", "Avenida ", out)
+    return out
+
+def _rev_geocode(lat: Optional[float], lon: Optional[float]) -> Tuple[Optional[str], Optional[str]]:
+    try:
+        if lat is None or lon is None:
+            return None, None
+        cx = _rev_gc_db()
+        row = cx.execute(
+            "select street, number from revgc where lat=? and lon=?",
+            (float(lat), float(lon))
+        ).fetchone()
+        if row:
+            return (row[0] or None), (row[1] or None)
+
+        url = "https://nominatim.openstreetmap.org/reverse"
+        ua = os.getenv("GEOCODE_UA", "enterate-etl/1.0")
+        r = requests.get(
+            url,
+            params={
+                "lat": f"{float(lat):.7f}",
+                "lon": f"{float(lon):.7f}",
+                "format": "json",
+                "zoom": 18,
+                "addressdetails": 1
+            },
+            headers={"User-Agent": ua},
+            timeout=20
+        )
+        if not r.ok:
+            return None, None
+        data = r.json()
+        addr = data.get("address", {}) if isinstance(data, dict) else {}
+        via = addr.get("road") or addr.get("pedestrian") or addr.get("footway") or addr.get("path") or addr.get("residential") or addr.get("cycleway")
+        num = addr.get("house_number")
+        via_norm = _normalize_via_name(via)
+        num_norm = _clean_num(num)
+        cx.execute(
+            "insert or replace into revgc(lat,lon,street,number) values(?,?,?,?)",
+            (float(lat), float(lon), via_norm, num_norm)
+        )
+        cx.commit()
+        time.sleep(1.0)
+        return via_norm, num_norm
+    except:
+        return None, None
+
+def _ayto_fill_from_coords(records: List[Dict]) -> List[Dict]:
+    out = []
+    for r in records:
+        rec = dict(r)
+        st = rec.get("via") or rec.get("street")
+        num = rec.get("numero") or rec.get("street_number")
+        if not st or not num:
+            lat = _to_float(rec.get("lat") or rec.get("latitude"))
+            lon = _to_float(rec.get("lon") or rec.get("longitude"))
+            if lat is not None and lon is not None:
+                via_rc, num_rc = _rev_geocode(lat, lon)
+                if not st and via_rc:
+                    rec["via"] = via_rc
+                    rec["street"] = via_rc
+                if not num and num_rc:
+                    rec["numero"] = num_rc
+                    rec["street_number"] = num_rc
+        out.append(rec)
     return out
 
 def _process_source(source: str) -> List[str]:
@@ -451,7 +549,7 @@ def _process_source(source: str) -> List[str]:
             base_clean = [c for r in raw_rows if (c := _clean_generic_madrid(r, ["municipio","city"], ["via","street","calle","direccion","descripcion"])) is not None]
             if not base_clean:
                 continue
-            cleaned = _ayto_enrich_with_desc(base_clean)
+            cleaned = _ayto_fill_from_coords(_ayto_enrich_with_desc(base_clean))
             unified = [_unify_ayto(c) for c in cleaned]
             _write_clean_json(fp, unified)
             df = _df_passthrough(cleaned)
