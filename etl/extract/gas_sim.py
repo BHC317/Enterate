@@ -33,12 +33,48 @@ DISTRITOS = [
     {"nombre":"Barajas","lat":40.4746,"lon":-3.5796}
 ]
 
+# NUEVO: muestrario de calles reales por distrito (igual que el de luz)
+CALLES_MADRID = {
+    "Centro": ["C/ Atocha","C/ Mayor","C/ Toledo","C/ Fuencarral","C/ Hortaleza","C/ Preciados","C/ Montera","C/ Segovia"],
+    "Arganzuela": ["Pº de las Delicias","C/ Méndez Álvaro","C/ Embajadores"],
+    "Retiro": ["Av. Menéndez Pelayo","C/ Doctor Esquerdo","C/ O'Donnell"],
+    "Salamanca": ["C/ Serrano","C/ Velázquez","C/ Goya","C/ Príncipe de Vergara"],
+    "Chamartín": ["Av. Alberto Alcocer","C/ Padre Damián","C/ Príncipe de Vergara"],
+    "Tetuán": ["C/ Bravo Murillo","C/ Marqués de Viana","C/ Orense"],
+    "Chamberí": ["C/ Santa Engracia","C/ Luchana","C/ Fuencarral"],
+    "Fuencarral-El Pardo": ["Av. Monforte de Lemos","C/ Sinesio Delgado"],
+    "Moncloa-Aravaca": ["Pº de la Florida","Av. de Valladolid","C/ Princesa"],
+    "Latina": ["Pº de Extremadura","C/ Valmojado","C/ General Fanjul"],
+    "Carabanchel": ["C/ General Ricardos","C/ Eugenia de Montijo"],
+    "Usera": ["Av. de Rafael Ybarra","Av. de Marcelo Usera"],
+    "Puente de Vallecas": ["Av. de la Albufera","C/ Monte Perdido"],
+    "Moratalaz": ["C/ Camino de los Vinateros","Av. Moratalaz"],
+    "Ciudad Lineal": ["C/ Alcalá","C/ Arturo Soria"],
+    "Hortaleza": ["C/ Silvano","C/ López de Hoyos"],
+    "Villaverde": ["Av. de Andalucía","C/ Alcocer"],
+    "Villa de Vallecas": ["C/ Real de Arganda","Av. del Ensanche de Vallecas"],
+    "Vicálvaro": ["C/ San Cipriano","C/ Minerva"],
+    "San Blas-Canillejas": ["C/ Alcalá","Av. de Arcentales"],
+    "Barajas": ["Av. de Logroño","C/ Galeón"]
+}
+
 TIPOS = [
     {"tipo":"mantenimiento","peso":0.50,"duracion_h":(2,6),"programado":True,"mensaje":"Intervención programada en la red de gas."},
     {"tipo":"avería","peso":0.35,"duracion_h":(1,4),"programado":False,"mensaje":"Avería inesperada en la red de gas."},
     {"tipo":"obra pública","peso":0.10,"duracion_h":(4,8),"programado":True,"mensaje":"Corte por trabajos coordinados con el Ayuntamiento."},
     {"tipo":"emergencia","peso":0.05,"duracion_h":(0.5,2),"programado":False,"mensaje":"Incidente urgente en la red."}
 ]
+
+def _pick_via(distrito_nombre: str) -> str:
+    calles = CALLES_MADRID.get(distrito_nombre) or []
+    if not calles:
+        return f"Simulado - {distrito_nombre}"
+    return random.choice(calles)
+
+def _rand_numero() -> str:
+    n = random.randint(1, 250)
+    suf = random.choices(["", " BIS", " A", " B"], weights=[0.85, 0.05, 0.05, 0.05], k=1)[0]
+    return f"{n}{suf}".strip()
 
 def run(output_dir: str | os.PathLike | None = None, dias=7, por_dia=3, seed: int | None = None):
     if seed is not None: random.seed(seed)
@@ -53,16 +89,23 @@ def run(output_dir: str | os.PathLike | None = None, dias=7, por_dia=3, seed: in
     for i in range(total):
         tipo = random.choices(TIPOS, weights=[t["peso"] for t in TIPOS])[0]
         d = random.choice(DISTRITOS)
-        start = hoy + timedelta(days=random.randint(0, dias-1), hours=random.randint(0,23))
+
+        start = hoy + timedelta(days=random.randint(0, dias-1), hours=random.randint(0,23), minutes=random.randint(0,59))
         fin = start + timedelta(hours=random.uniform(*tipo["duracion_h"]))
+
+        via = _pick_via(d["nombre"])
+        numero = _rand_numero()
+
         eventos.append({
             "event_id": f"gas-next7-{i+1:04d}",
             "tipo": tipo["tipo"],
             "programado": tipo["programado"],
-            "direccion": f"Simulado - {d['nombre']}",
+            "direccion": f"{via} {numero}",          
+            "via": via,                               
+            "numero": numero,                         
             "lat": d["lat"] + random.uniform(-0.002, 0.002),
             "lon": d["lon"] + random.uniform(-0.002, 0.002),
-            "start_ts": start.isoformat(),
+            "start_ts": start.isoformat(),           
             "end_ts": fin.isoformat(),
             "mensaje": tipo["mensaje"]
         })
