@@ -14,6 +14,7 @@ class AdStatusEnum(str, enum.Enum):
 
 class Plan(Base):
     __tablename__ = "plans"
+    __table_args__ = {"schema": "public"}
     id = Column(Integer, primary_key=True)
     name = Column(String(80), unique=True, nullable=False)
     monthly_price_usd = Column(Numeric(10, 2), nullable=False)
@@ -23,10 +24,11 @@ class Plan(Base):
 
 class Advertiser(Base):
     __tablename__ = "advertisers"
+    __table_args__ = {"schema": "public"}
     id = Column(Integer, primary_key=True)
     name = Column(String(120), nullable=False)
     email = Column(String(200), unique=True, index=True, nullable=False)
-    plan_id = Column(Integer, ForeignKey("plans.id"), nullable=True)
+    plan_id = Column(Integer, ForeignKey("public.plans.id"), nullable=True)
     created_at = Column(DateTime, server_default=func.now(), nullable=False)
 
     plan = relationship("Plan", back_populates="advertisers")
@@ -34,8 +36,9 @@ class Advertiser(Base):
 
 class Ad(Base):
     __tablename__ = "ads"
+    __table_args__ = {"schema": "public"}
     id = Column(Integer, primary_key=True)
-    user_id = Column(Integer, ForeignKey("advertisers.id"), nullable=False)
+    user_id = Column(Integer, ForeignKey("public.advertisers.id"), nullable=False)
     title = Column(String(200), nullable=False)
     media_url = Column(String(500), nullable=False)
     target_url = Column(String(500), nullable=False)
@@ -49,11 +52,13 @@ class Ad(Base):
 
 class AdStatsDaily(Base):
     __tablename__ = "ad_stats_daily"
-    ad_id = Column(Integer, ForeignKey("ads.id"), primary_key=True)
+    __table_args__ = (
+        UniqueConstraint("ad_id", "day", name="uq_ad_day"),
+        {"schema": "public"},
+    )
+    ad_id = Column(Integer, ForeignKey("public.ads.id"), primary_key=True)
     day = Column(Date, primary_key=True)
     impressions = Column(Integer, nullable=False, default=0)
     clicks = Column(Integer, nullable=False, default=0)
-
-    __table_args__ = (UniqueConstraint("ad_id", "day", name="uq_ad_day"),)
 
     ad = relationship("Ad", back_populates="stats")

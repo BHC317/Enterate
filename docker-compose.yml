@@ -1,33 +1,36 @@
+version: "3.9"
+
 services:
-  db:
+  postgres:
     image: postgis/postgis:16-3.4
-    container_name: postgres_local
+    container_name: enterate-postgres
     environment:
-      POSTGRES_DB: ${POSTGRES_DB}
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: appdb
+      POSTGRES_USER: appuser
+      POSTGRES_PASSWORD: apppass
     ports:
       - "5433:5432"
     volumes:
       - pg_data:/var/lib/postgresql/data
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      test: ["CMD-SHELL", "pg_isready -U appuser -d appdb"]
       interval: 5s
-      timeout: 5s
+      timeout: 3s
       retries: 10
-  api: 
+
+  api:
     build: .
-    image: enterateapi-rest
     container_name: enterateapi-rest
     env_file: .env
     depends_on:
-      db:
+      postgres:
         condition: service_healthy
     ports:
       - "8001:8001"
     volumes:
-      - ./app:/app
+      - ./app:/app       # Monta la carpeta de la API
+      - ./etl:/app/etl   # Monta la carpeta de ETL
+    command: uvicorn main:app --host 0.0.0.0 --port 8001 --reload
 
 volumes:
   pg_data:
