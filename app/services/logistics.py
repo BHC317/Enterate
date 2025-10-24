@@ -1,3 +1,4 @@
+from database import SessionLocal
 from models.models import Coordinate
 from models.models import (
 RouteRequest,
@@ -38,7 +39,7 @@ class LogisticsService:
     def find_incidents_near_point(p: Coordinate, max_radius_m: int = 250) -> list[Incident]:
         near: list[Incident] = []
         for inc in STATIC_INCIDENTS:
-            d = haversine_m(p.lat, p.lng, inc.location.lat, inc.location.lng)
+            d = haversine_m(p.lat, p.lng, inc.lat, inc.lon)
             if d <= max(inc.radius_m, max_radius_m):
                 near.append(inc)
         return near
@@ -134,19 +135,30 @@ class LogisticsService:
     @staticmethod
     def nearby_incidents(center: Coordinate, radius_m: int, types: list[str] | None, since: str | None) -> list[Incident]:
         from datetime import datetime
-        results: list[Incident] = []
+
         since_dt = None
         if since:
             try:
                 since_dt = datetime.fromisoformat(since)
             except Exception:
-                since_dt = None
-        for inc in STATIC_INCIDENTS:
+                since_dt = None        
+        session = SessionLocal()
+        query = session.query(Incident)
+        if types:
+            query = query.filter(Incident.type.in_(types))
+        if since_dt:
+            query = query.filter(Incident.start_ts_utc >= since_dt)
+        candidates = query.all()
+
+
+        results: list[Incident] = []
+
+        for inc in candidates:
             if types and inc.type not in types:
                 continue
-            if since_dt and inc.start_time and inc.start_time < since_dt:
+            if since_dt and inc.start_ts_utc and inc.start_ts_utc < since_dt:
                 continue
-            d = haversine_m(center.lat, center.lng, inc.location.lat, inc.location.lng)
+            d = haversine_m(center.lat, center.lng, inc.lat, inc.lon)
             if d <= radius_m:
                 results.append(inc)
         return results

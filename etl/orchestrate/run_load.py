@@ -4,6 +4,9 @@ from pathlib import Path
 from textwrap import dedent
 import duckdb
 from dotenv import load_dotenv
+import psycopg2
+from psycopg2 import sql
+import os
 
 ETL_ROOT = Path(__file__).resolve().parents[1]
 REPO_ROOT = ETL_ROOT.parent
@@ -17,8 +20,8 @@ DBT_PROFILES_YML = DBT_PROFILES_DIR / "profiles.yml"
 REQUIRED_ENV = ["PGHOST", "PGPORT", "PGDATABASE", "PGUSER", "PGPASSWORD"]
 
 DEFAULT_PG = {
-    "PGHOST": "localhost",
-    "PGPORT": "5433",
+    "PGHOST": "postgres",
+    "PGPORT": "5432",
     "PGDATABASE": "appdb",
     "PGUSER": "appuser",
     "PGPASSWORD": "apppass",
@@ -48,16 +51,33 @@ def ensure_env():
 def ensure_postgres_up():
     print("== [LOAD] Levantando Postgres con Docker Compose ==")
     sh(["docker", "compose", "-f", str(DOCKER_COMPOSE_FILE), "up", "-d"], check=False)
-
 def ensure_schemas():
     print("== [LOAD] Asegurando schemas staging/analytics ==")
-    psql_cmd = (
-        "CREATE SCHEMA IF NOT EXISTS staging AUTHORIZATION appuser;"
-        "CREATE SCHEMA IF NOT EXISTS analytics AUTHORIZATION appuser;"
-        "CREATE SCHEMA IF NOT EXISTS analytics_staging AUTHORIZATION appuser;"
+    
+    # Datos de conexión desde variables de entorno o hardcode
+    DB_USER = os.getenv("POSTGRES_USER", "appuser")
+
+    conn = psycopg2.connect(
+        dbname="appdb",
+        user="appuser",
+        password="apppass",
+        host="postgres",  # <- nombre del servicio
+        port=5432         # <- puerto del contenedor
     )
-    sh(["docker", "exec", "-i", "enterate-postgres",
-        "psql", "-U", "appuser", "-d", "appdb", "-c", psql_cmd], check=False)
+    conn.autocommit = True
+
+    schemas = ["staging", "analytics", "analytics_staging"]
+
+    with conn.cursor() as cur:
+        for schema in schemas:
+            query = sql.SQL("CREATE SCHEMA IF NOT EXISTS {} AUTHORIZATION {user}").format(
+                sql.Identifier(schema),
+                user=sql.Identifier(DB_USER)
+            )
+            cur.execute(query)
+            print(f"Schema '{schema}' asegurado")
+
+    conn.close()
 
 def ensure_profiles_yml():
     print(f"== [LOAD] profiles.yml en {DBT_PROFILES_YML} ==")
@@ -149,7 +169,7 @@ def run_dbt_build():
 
 def main():
     ensure_env()
-    ensure_postgres_up()
+    #ensure_postgres_up()
     ensure_schemas()
     ensure_profiles_yml()
     load_staging_inline()

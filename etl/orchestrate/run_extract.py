@@ -39,9 +39,9 @@ def _safe(tag, fn, *args, quiet: bool = False, **kwargs):
 
             try:
                 try:
-                    ide_simulate.main(output_dir=str(out_dir))
+                    ide_simulate.run(output_dir=str(out_dir))
                 except TypeError:
-                    ide_simulate.main()
+                    ide_simulate.run()
             except Exception as e2:
                 _print(True, f"[WARN] ide_simulate falló: {e2}")
 
