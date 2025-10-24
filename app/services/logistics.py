@@ -37,10 +37,21 @@ def interpolate_points(a: Coordinate, b: Coordinate, spacing_m: int = 200) -> li
 class LogisticsService:
     @staticmethod
     def find_incidents_near_point(p: Coordinate, max_radius_m: int = 250) -> list[Incident]:
-        near: list[Incident] = []
-        for inc in STATIC_INCIDENTS:
+        near: list[Incident] = []    
+        session = SessionLocal()
+        query = session.query(Incident)
+        candidates = query.all()
+
+
+        #results: list[Incident] = []
+
+
+        DEFAULT_INCIDENT_RADIUS = 50
+        for inc in candidates:
+            if inc.lat is None or inc.lon is None:
+                continue
             d = haversine_m(p.lat, p.lng, inc.lat, inc.lon)
-            if d <= max(inc.radius_m, max_radius_m):
+            if d <= max(DEFAULT_INCIDENT_RADIUS, max_radius_m):
                 near.append(inc)
         return near
     
@@ -69,18 +80,18 @@ class LogisticsService:
                 near.extend(LogisticsService.find_incidents_near_point(p, max_radius_m=250))
 
             if near:
-                incident = sorted(
-                    near,
-                    key=lambda x: ["low","medium","high","critical"].index(x.severity)
-                )[-1]
-                if incident.id not in {x.id for x in incidents_found}:
+                incident = near[0]
+                DEFAULT_SEVERITY = "medium"
+                if incident.fingerprint not in {x.fingerprint for x in incidents_found}:
+                    if not hasattr(incident, 'severity'):
+                        incident.severity = DEFAULT_SEVERITY
                     incidents_found.append(incident)
                 seg_distance = haversine_m(a.lat, a.lng, b.lat, b.lng)
                 affected_segments.append(
-                    AffectedSegment(start_index=i, end_index=i+1, distance_m=seg_distance, reason_incident_id=incident.id)
+                    AffectedSegment(start_index=i, end_index=i+1, distance_m=seg_distance, reason_incident_id=incident.fingerprint)
                 )
                 delay_map = {"low": 1, "medium": 3, "high": 8, "critical": 15}
-                total_delay_min += delay_map.get(incident.severity, 3)
+                total_delay_min += delay_map.get(DEFAULT_SEVERITY, 3)
 
         # ETA base: 30 km/h sobre distancia geométrica
         total_distance_m = 0
@@ -116,9 +127,13 @@ class LogisticsService:
 
         # Riesgo (0..1) segun severidad acumulada
         sev_weight = {"low": 0.1, "medium": 0.25, "high": 0.6, "critical": 0.9}
+        DEFAULT_SEVERITY = "medium"
         risk = 0.0
         for inc in incidents_found:
-            risk = min(1.0, risk + sev_weight.get(inc.severity, 0.2))
+            severity = getattr(inc, 'severity', DEFAULT_SEVERITY)
+            if severity not in sev_weight:
+                    severity = DEFAULT_SEVERITY            
+            risk = min(1.0, risk + sev_weight.get(severity, 0.2))
 
         return RouteAnalysisResponse(
             has_incidents=bool(incidents_found),
@@ -133,7 +148,7 @@ class LogisticsService:
         )
 
     @staticmethod
-    def nearby_incidents(center: Coordinate, radius_m: int, types: list[str] | None, since: str | None) -> list[Incident]:
+    def nearby_incidents(center: Coordinate, radius_m: int, categories: list[str] | None, since: str | None) -> list[Incident]:
         from datetime import datetime
 
         since_dt = None
@@ -144,8 +159,8 @@ class LogisticsService:
                 since_dt = None        
         session = SessionLocal()
         query = session.query(Incident)
-        if types:
-            query = query.filter(Incident.type.in_(types))
+        if categories:
+            query = query.filter(Incident.category.in_(categories))
         if since_dt:
             query = query.filter(Incident.start_ts_utc >= since_dt)
         candidates = query.all()
@@ -154,9 +169,11 @@ class LogisticsService:
         results: list[Incident] = []
 
         for inc in candidates:
-            if types and inc.type not in types:
+            if categories and inc.category not in categories:
                 continue
             if since_dt and inc.start_ts_utc and inc.start_ts_utc < since_dt:
+                continue
+            if inc.lat is None or inc.lon is None:
                 continue
             d = haversine_m(center.lat, center.lng, inc.lat, inc.lon)
             if d <= radius_m:
