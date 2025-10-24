@@ -33,7 +33,9 @@ app.include_router(incidents.router)
 def init_db():
     with engine.begin() as conn:
         conn.exec_driver_sql("CREATE EXTENSION IF NOT EXISTS postgis")
-        conn.exec_driver_sql("CREATE SCHEMA IF NOT EXISTS core")
+        schemas = ["staging", "analytics_analytics"]
+        for schema in schemas:
+            conn.exec_driver_sql(f"CREATE SCHEMA IF NOT EXISTS {schema}")
     # Crear tablas si no existen (al cargar el módulo)
     Base.metadata.create_all(bind=engine)
 

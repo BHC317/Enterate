@@ -79,8 +79,8 @@ def get_incident_by_id(
 )
 def filter_incidents(
     source: str = Query(None, enum=["gas", "ayto", "ide", "canal"], description="Filter by incident source"),
-    category: str = Query(None, enum=["gas", "road", "electricity", "water"], description="Filter by incident category"),
-    status: str = Query(None, enum=["planned", "active", "1"], description="Filter by incident status"),
+    category: str = Query(None, enum=["gas", "road", "road_works", "electricity", "water"], description="Filter by incident category"),
+    status: str = Query(None, enum=["planned", "active", "unplanned"], description="Filter by incident status"),
     street: str = Query(None, description="Filter by street name (partial match)"),
     db: Session = Depends(get_db)
 ):

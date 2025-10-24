@@ -5,8 +5,10 @@ import time
 import sqlite3
 import unicodedata
 import requests
+import hashlib
 from pathlib import Path
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 from typing import Dict, List, Tuple, Optional
 import pandas as pd
 
@@ -15,8 +17,7 @@ RAW = BASE / "data_raw"
 CUR = BASE / "data_curated"
 CACHE = BASE / ".cache"
 SOURCES = ["ide", "canal", "ayto", "gas"]
-
-# ------------------------ FS UTILS ------------------------
+TZ_MAD = ZoneInfo("Europe/Madrid")
 
 def _iter_json_files(source: str) -> List[Tuple[Path, str]]:
     out = []
@@ -58,8 +59,6 @@ def _write_clean_json(original_fp: Path, records: List[Dict]) -> Optional[Path]:
     out_fp.write_text(json.dumps(records, ensure_ascii=False, indent=2), encoding="utf-8")
     return out_fp
 
-# ------------------------ MADRID CHECKS ------------------------
-
 def _strip_accents(s: str) -> str:
     return unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
 
@@ -82,8 +81,6 @@ def _in_bbox(lat: Optional[float], lon: Optional[float]) -> bool:
         return 40.2 <= float(lat) <= 40.6 and -3.9 <= float(lon) <= -3.4
     except:
         return False
-
-# ------------------------ GEOCODING ------------------------
 
 def _gc_db():
     CACHE.mkdir(parents=True, exist_ok=True)
@@ -121,8 +118,6 @@ def _geocode(street: Optional[str], number: Optional[str]) -> Tuple[Optional[flo
             return lat, lon
     return None, None
 
-# ------------------------ CLEANING HELPERS ------------------------
-
 _VIA_TOKEN = r"(?:Cl|C/|Calle|Avda?|Av\.?|Paseo|Ps\.?|Plaza|Pl\.?|Ctra|Ronda|Camino|Cmno|Pza\.?)"
 
 def _clean_via(v: Optional[str]) -> Optional[str]:
@@ -150,6 +145,49 @@ def _clean_num(n: Optional[str]) -> Optional[str]:
     m = re.match(r"^(\d+[A-Za-z]{0,2})", s)
     return m.group(1) if m else None
 
+def _to_float(x):
+    try:
+        return float(x)
+    except:
+        return None
+
+def _now_utc_iso():
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00","Z")
+
+def _ts_from_date_time(date_str: Optional[str], time_str: Optional[str]) -> Optional[str]:
+    if not date_str:
+        return None
+    t = time_str or "00:00"
+    try:
+        d = datetime.strptime(f"{date_str} {t}", "%d/%m/%Y %H:%M")
+    except:
+        return None
+    dt = d.replace(tzinfo=TZ_MAD).astimezone(timezone.utc)
+    return dt.replace(microsecond=0).isoformat().replace("+00:00","Z")
+
+def _to_utc_iso(ts_like: Optional[str]) -> Optional[str]:
+    if not ts_like:
+        return None
+    try:
+        dt = datetime.fromisoformat(ts_like.replace("Z","+00:00"))
+    except:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=TZ_MAD)
+    dt = dt.astimezone(timezone.utc)
+    return dt.replace(microsecond=0).isoformat().replace("+00:00","Z")
+
+def _fp(city, street, number, category, source, start_iso) -> str:
+    base = "|".join([
+        (city or "").lower(),
+        (street or "").lower(),
+        (number or "").lower(),
+        (category or "").lower(),
+        (source or "").lower(),
+        (start_iso or "")
+    ])
+    return hashlib.sha1(base.encode("utf-8")).hexdigest()
+
 def _clean_ide_record(rec: Dict) -> Optional[Dict]:
     m = str(rec.get("municipio") or "").strip()
     if not _is_madrid_strict(m):
@@ -163,10 +201,13 @@ def _clean_ide_record(rec: Dict) -> Optional[Dict]:
     num = _clean_num(num_raw)
     out["via"] = via
     out["numero"] = num
-    lat_g, lon_g = _geocode(via, num)
-    if lat_g is not None and lon_g is not None:
-        out["lat"] = lat_g
-        out["lon"] = lon_g
+    lat = _to_float(out.get("lat"))
+    lon = _to_float(out.get("lon"))
+    if lat is None or lon is None:
+        lat_g, lon_g = _geocode(via, num)
+        if lat_g is not None and lon_g is not None:
+            out["lat"] = lat_g
+            out["lon"] = lon_g
     return out
 
 def _ayto_extract_from_desc(desc: Optional[str]) -> Tuple[Optional[str], Optional[str]]:
@@ -215,8 +256,6 @@ def _clean_generic_madrid(rec: Dict, city_keys: List[str], addr_keys: List[str],
         return out
     return None
 
-# ------------------------ DATAFRAME BUILDERS ------------------------
-
 def _df_ide(rows: List[Dict]) -> pd.DataFrame:
     df = pd.DataFrame(rows)
     need = ["municipio","fecha","hora_inicio","hora_fin","via","numero","lat","lon"]
@@ -233,8 +272,6 @@ def _df_passthrough(rows: List[Dict], required: List[str] | None = None) -> pd.D
             if c not in df.columns:
                 df[c] = None
     return df.reset_index(drop=True)
-
-# ------------------------ WRITING ------------------------
 
 def _write_daily(df: pd.DataFrame, source: str, dt: str) -> Path:
     out_dir = CUR / source / f"dt={dt}"
@@ -284,7 +321,207 @@ def _build_union_history() -> Path:
     hist.to_parquet(out_fp, index=False)
     return out_fp
 
-# ------------------------ PIPELINE ------------------------
+def _unify_ide(rec: Dict) -> Dict:
+    street = rec.get("via")
+    number = rec.get("numero")
+    lat = _to_float(rec.get("lat"))
+    lon = _to_float(rec.get("lon"))
+    start_iso = _ts_from_date_time(rec.get("fecha"), rec.get("hora_inicio"))
+    end_iso = _ts_from_date_time(rec.get("fecha"), rec.get("hora_fin"))
+    out = {
+        "source": "ide",
+        "category": "electricity",
+        "status": "planned",
+        "city": "Madrid",
+        "street": street,
+        "street_number": number,
+        "lat": lat,
+        "lon": lon,
+        "start_ts_utc": start_iso,
+        "end_ts_utc": end_iso,
+        "description": None,
+        "event_id": None,
+        "ingested_at_utc": _now_utc_iso()
+    }
+    out["fingerprint"] = _fp(out["city"], out["street"], out["street_number"], out["category"], out["source"], out["start_ts_utc"])
+    return out
+
+def _unify_canal(rec: Dict) -> Dict:
+    street = rec.get("via") or rec.get("street") or rec.get("direccion")
+    number = rec.get("numero") or rec.get("street_number")
+    lat = _to_float(rec.get("lat") or rec.get("latitude"))
+    lon = _to_float(rec.get("lon") or rec.get("longitude"))
+    start_iso = _to_utc_iso(rec.get("start_ts_utc") or rec.get("start_ts") or rec.get("start") or rec.get("inicio"))
+    end_iso = _to_utc_iso(rec.get("end_ts_utc") or rec.get("end_ts") or rec.get("end") or rec.get("fin"))
+    status = str(rec.get("status") or rec.get("estado") or "active")
+    out = {
+        "source": "canal",
+        "category": "water",
+        "status": status,
+        "city": "Madrid",
+        "street": street,
+        "street_number": number,
+        "lat": lat,
+        "lon": lon,
+        "start_ts_utc": start_iso,
+        "end_ts_utc": end_iso,
+        "description": rec.get("mensaje"),
+        "event_id": rec.get("event_id"),
+        "ingested_at_utc": _now_utc_iso()
+    }
+    out["fingerprint"] = _fp(out["city"], out["street"], out["street_number"], out["category"], out["source"], out["start_ts_utc"])
+    return out
+
+def _unify_ayto(rec: Dict) -> Dict:
+    street = rec.get("via") or rec.get("street") or rec.get("calle") or rec.get("direccion")
+    number = rec.get("numero") or rec.get("street_number")
+    lat = _to_float(rec.get("lat") or rec.get("latitude"))
+    lon = _to_float(rec.get("lon") or rec.get("longitude"))
+    start_iso = _to_utc_iso(rec.get("start_ts") or rec.get("start_ts_utc") or rec.get("inicio"))
+    end_iso = _to_utc_iso(rec.get("end_ts") or rec.get("end_ts_utc") or rec.get("fin"))
+    status = str(rec.get("status") or rec.get("estado") or "active")
+    event_id = rec.get("event_id") or rec.get("id_incidencia") or rec.get("codigo")
+    out = {
+        "source": "ayto",
+        "category": "road",
+        "status": status,
+        "city": "Madrid",
+        "street": street,
+        "street_number": number,
+        "lat": lat,
+        "lon": lon,
+        "start_ts_utc": start_iso,
+        "end_ts_utc": end_iso,
+        "description": rec.get("descripcion"),
+        "event_id": event_id,
+        "ingested_at_utc": _now_utc_iso()
+    }
+    out["fingerprint"] = _fp(out["city"], out["street"], out["street_number"], out["category"], out["source"], out["start_ts_utc"])
+    return out
+
+def _unify_gas(rec: Dict) -> Dict:
+    street = rec.get("via") or rec.get("street") or rec.get("direccion")
+    number = rec.get("numero") or rec.get("street_number")
+    lat = _to_float(rec.get("lat"))
+    lon = _to_float(rec.get("lon"))
+    start_iso = _to_utc_iso(rec.get("start_ts_utc") or rec.get("start_ts") or rec.get("start"))
+    end_iso   = _to_utc_iso(rec.get("end_ts_utc")   or rec.get("end_ts")   or rec.get("end"))
+    status = str(rec.get("status") or ("planned" if rec.get("programado") else "unplanned"))
+    out = {
+        "source": "gas",
+        "category": "gas",
+        "status": status,
+        "city": "Madrid",
+        "street": street,
+        "street_number": number,
+        "lat": lat,
+        "lon": lon,
+        "start_ts_utc": start_iso,
+        "end_ts_utc": end_iso,
+        "description": rec.get("descripcion") or rec.get("mensaje"),
+        "event_id": rec.get("event_id"),
+        "ingested_at_utc": _now_utc_iso()
+    }
+    out["fingerprint"] = _fp(out["city"], out["street"], out["street_number"], out["category"], out["source"], out["start_ts_utc"])
+    return out
+
+def _rev_gc_db():
+    CACHE.mkdir(parents=True, exist_ok=True)
+    cx = sqlite3.connect(CACHE / "geocode.sqlite")
+    cx.execute("""
+    create table if not exists revgc(
+        lat real,
+        lon real,
+        street text,
+        number text,
+        primary key(lat,lon)
+    )
+    """)
+    cx.commit()
+    return cx
+
+def _normalize_via_name(v: Optional[str]) -> Optional[str]:
+    if not v:
+        return None
+    s = str(v).strip()
+    s = re.sub(r"\s+", " ", s)
+    words = s.split(" ")
+    lower_keep = {"de","del","la","las","el","los","y","a","al","da","do","dos","das"}
+    norm = []
+    for i,w in enumerate(words):
+        ww = w.lower()
+        if i>0 and ww in lower_keep:
+            norm.append(ww)
+        else:
+            norm.append(ww.capitalize() if len(ww)>2 else ww.upper())
+    out = " ".join(norm)
+    out = re.sub(r"^P[oº]\.?\s*", "Pº ", out)
+    out = re.sub(r"^Avda\.?\s*", "Avenida ", out)
+    return out
+
+def _rev_geocode(lat: Optional[float], lon: Optional[float]) -> Tuple[Optional[str], Optional[str]]:
+    try:
+        if lat is None or lon is None:
+            return None, None
+        cx = _rev_gc_db()
+        row = cx.execute(
+            "select street, number from revgc where lat=? and lon=?",
+            (float(lat), float(lon))
+        ).fetchone()
+        if row:
+            return (row[0] or None), (row[1] or None)
+
+        url = "https://nominatim.openstreetmap.org/reverse"
+        ua = os.getenv("GEOCODE_UA", "enterate-etl/1.0")
+        r = requests.get(
+            url,
+            params={
+                "lat": f"{float(lat):.7f}",
+                "lon": f"{float(lon):.7f}",
+                "format": "json",
+                "zoom": 18,
+                "addressdetails": 1
+            },
+            headers={"User-Agent": ua},
+            timeout=20
+        )
+        if not r.ok:
+            return None, None
+        data = r.json()
+        addr = data.get("address", {}) if isinstance(data, dict) else {}
+        via = addr.get("road") or addr.get("pedestrian") or addr.get("footway") or addr.get("path") or addr.get("residential") or addr.get("cycleway")
+        num = addr.get("house_number")
+        via_norm = _normalize_via_name(via)
+        num_norm = _clean_num(num)
+        cx.execute(
+            "insert or replace into revgc(lat,lon,street,number) values(?,?,?,?)",
+            (float(lat), float(lon), via_norm, num_norm)
+        )
+        cx.commit()
+        time.sleep(1.0)
+        return via_norm, num_norm
+    except:
+        return None, None
+
+def _ayto_fill_from_coords(records: List[Dict]) -> List[Dict]:
+    out = []
+    for r in records:
+        rec = dict(r)
+        st = rec.get("via") or rec.get("street")
+        num = rec.get("numero") or rec.get("street_number")
+        if not st or not num:
+            lat = _to_float(rec.get("lat") or rec.get("latitude"))
+            lon = _to_float(rec.get("lon") or rec.get("longitude"))
+            if lat is not None and lon is not None:
+                via_rc, num_rc = _rev_geocode(lat, lon)
+                if not st and via_rc:
+                    rec["via"] = via_rc
+                    rec["street"] = via_rc
+                if not num and num_rc:
+                    rec["numero"] = num_rc
+                    rec["street_number"] = num_rc
+        out.append(rec)
+    return out
 
 def _process_source(source: str) -> List[str]:
     written_dt = set()
@@ -292,46 +529,42 @@ def _process_source(source: str) -> List[str]:
         raw_rows = _read_json(fp)
         if not raw_rows:
             continue
-
         if source == "ide":
             cleaned = [c for r in raw_rows if (c := _clean_ide_record(r)) is not None]
             if not cleaned:
                 continue
-            _write_clean_json(fp, cleaned)
+            unified = [_unify_ide(c) for c in cleaned]
+            _write_clean_json(fp, unified)
             df = _df_ide(cleaned)
-
         elif source == "canal":
             cleaned = [c for r in raw_rows if (c := _clean_generic_madrid(r, ["municipio","city"], ["via","street","direccion"])) is not None]
             if not cleaned:
                 continue
-            _write_clean_json(fp, cleaned)
+            unified = [_unify_canal(c) for c in cleaned]
+            _write_clean_json(fp, unified)
             df = _df_passthrough(cleaned)
-
         elif source == "ayto":
-            # Solo limpiar los ficheros 'events', no los raw XML parseados
             if "events" not in fp.stem.lower():
                 continue
             base_clean = [c for r in raw_rows if (c := _clean_generic_madrid(r, ["municipio","city"], ["via","street","calle","direccion","descripcion"])) is not None]
             if not base_clean:
                 continue
-            cleaned = _ayto_enrich_with_desc(base_clean)
-            _write_clean_json(fp, cleaned)
+            cleaned = _ayto_fill_from_coords(_ayto_enrich_with_desc(base_clean))
+            unified = [_unify_ayto(c) for c in cleaned]
+            _write_clean_json(fp, unified)
             df = _df_passthrough(cleaned)
-
         elif source == "gas":
             cleaned = [c for r in raw_rows if (c := _clean_generic_madrid(r, ["city"], ["street","direccion"])) is not None]
             if not cleaned:
                 continue
-            _write_clean_json(fp, cleaned)
+            unified = [_unify_gas(c) for c in cleaned]
+            _write_clean_json(fp, unified)
             df = _df_passthrough(cleaned)
-
         else:
             continue
-
         if not df.empty:
             _write_daily(df, source, dt)
             written_dt.add(dt)
-
     _build_history(source)
     return sorted(written_dt)
 

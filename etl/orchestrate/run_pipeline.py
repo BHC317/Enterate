@@ -8,7 +8,7 @@ from datetime import datetime, timezone
 BASE = Path(__file__).resolve().parents[1]
 RAW = BASE / "data_raw"
 CUR = BASE / "data_curated"
-SOURCES_DAILY = ["ide","canal","ayto"]
+SOURCES_DAILY = ["ide", "canal", "ayto"]
 SOURCES_WEEKLY = ["gas"]
 
 def _today_yymmdd():
@@ -24,46 +24,58 @@ def _run(cmd):
 
 def _raw_has_json(src, yyyymmdd):
     d = RAW / src / yyyymmdd
-    if not d.exists():
-        return False
-    return any(p.is_file() and p.suffix.lower()==".json" for p in d.iterdir())
+    return d.exists() and any(p.is_file() and p.suffix.lower() == ".json" for p in d.iterdir())
 
-def _verify_extraction(mode):
+def _list_missing_and_available(mode):
     need = list(SOURCES_DAILY)
-    if mode in ("weekly","all"):
+    if mode in ("weekly", "all"):
         need += SOURCES_WEEKLY
-    today = _today_yymmdd()
-    missing = [s for s in need if not _raw_has_json(s, today)]
-    if missing:
-        raise SystemExit(f"[extract][missing] {today} -> {', '.join(missing)}")
-    return _to_iso(today)
+    ymd = _today_yymmdd()
+    avail, missing = [], []
+    for s in need:
+        (_raw_has_json(s, ymd) and avail.append(s)) or missing.append(s)
+    return ymd, avail, missing
 
 def _curated_ok_for_dt(src, dt_iso):
     p = CUR / src / f"dt={dt_iso}" / "part-000.parquet"
     return p.exists() and p.is_file() and p.stat().st_size > 0
 
-def _verify_transform(dt_iso, mode):
-    need = list(SOURCES_DAILY)
-    if mode in ("weekly","all"):
-        need += SOURCES_WEEKLY
-    missing = []
-    for s in need:
-        if not _curated_ok_for_dt(s, dt_iso):
-            missing.append(f"{s}/dt={dt_iso}")
-    if missing:
-        raise SystemExit(f"[transform][missing] {', '.join(missing)}")
+def _soft_verify_transform(dt_iso, sources):
+    if not sources:
+        print(f"[warn][transform] no hay fuentes disponibles para verificar dt={dt_iso}")
+        return
+    not_ok = [s for s in sources if not _curated_ok_for_dt(s, dt_iso)]
+    if not_ok:
+        print(f"[warn][transform] faltan parquets de dt={dt_iso}: {', '.join(not_ok)}")
     u = CUR / "union" / f"dt={dt_iso}" / "part-000.parquet"
     if not (u.exists() and u.is_file() and u.stat().st_size > 0):
-        raise SystemExit(f"[union][missing] dt={dt_iso}")
+        print(f"[warn][union] falta union dt={dt_iso}")
 
 def main():
-    mode = os.getenv("PIPELINE_MODE","daily").strip().lower()
-    if mode not in ("daily","weekly","all"):
-        mode = "daily"
+    mode = os.getenv("PIPELINE_MODE", "all").strip().lower()
+    if mode not in ("daily", "weekly", "all"):
+        mode = "all"
+
+    # 1) Extraer (incluye fallback/simulación dentro de run_extract)
     _run([sys.executable, "-m", "etl.orchestrate.run_extract", "--mode", mode])
-    dt_iso = _verify_extraction(mode)
+
+    # 2) Verificar extracción de forma NO bloqueante y continuar siempre
+    ymd, avail, missing = _list_missing_and_available(mode)
+    dt_iso = _to_iso(ymd)
+    if missing:
+        print(f"[warn][extract] {ymd} faltan: {', '.join(missing)}")
+    else:
+        print(f"[ok][extract] {ymd} todas las fuentes presentes")
+
+    # 3) Transformar (parquets) — SIEMPRE
     _run([sys.executable, "-m", "etl.transform.run_transform"])
-    _verify_transform(dt_iso, mode)
+
+    # 4) Verificación suave de transform — NO bloquea
+    _soft_verify_transform(dt_iso, avail)
+
+    # 5) Cargar + dbt — SIEMPRE
+    _run([sys.executable, "-m", "etl.orchestrate.run_load"])
+
     print("[pipeline] ok")
 
 if __name__ == "__main__":

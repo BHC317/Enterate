@@ -1,0 +1,9 @@
+version: 2
+sources:
+  - name: staging
+    schema: staging
+    tables:
+      - name: electricity
+      - name: water
+      - name: road
+      - name: gas

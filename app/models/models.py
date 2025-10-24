@@ -7,7 +7,7 @@ from schemas.schemas import IncidentSchema
 
 class Customer(Base):
     __tablename__ = "customers"
-
+    __table_args__ = {"schema": "public"}
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String(120), nullable=False)
     email = Column(String(200), unique=True, index=True, nullable=False)
@@ -27,12 +27,12 @@ class VehicleInfo(BaseModel):
     height_m: float | None = Field(None, ge=0)
 
 class Incident(Base):
-    __tablename__ = "fact_incident"
+    __tablename__ = "fct_events"
     __table_args__ = (
         CheckConstraint("source IN ('gas', 'ayto', 'ide', 'canal')"),
-        CheckConstraint("category IN ('gas', 'road', 'electricity', 'water')"),
-        CheckConstraint("status IN ('planned', 'active', '1')"),
-        {"schema": "core"},
+        CheckConstraint("status IN ('planned', 'active', 'unplanned')"),
+        CheckConstraint("category IN ('gas', 'electricity', 'water', 'road_works', 'road')"),
+        {"schema": "analytics_analytics"},
     )
 
     fingerprint = Column(String(100), primary_key=True, index=True)
@@ -42,8 +42,8 @@ class Incident(Base):
     city = Column(String(100), nullable=False)
     street = Column(String(255), nullable=True)
     street_number = Column(String(20), nullable=True)
-    lat = Column(Float, nullable=False)
-    lon = Column(Float, nullable=False)
+    lat = Column(Float, nullable=True)
+    lon = Column(Float, nullable=True)
     start_ts_utc = Column(TIMESTAMP(timezone=True), nullable=False)
     end_ts_utc = Column(TIMESTAMP(timezone=True), nullable=True)
     description = Column(Text, nullable=True)
