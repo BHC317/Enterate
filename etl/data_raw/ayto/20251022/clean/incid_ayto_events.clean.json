@@ -12,7 +12,7 @@
     "end_ts_utc": "2025-01-17T15:21:09Z",
     "description": "ANTONIO LEYVA, ENTRE MIGUEL SORIANO Y JOSEFA FDEZ. BUTERGA. ZONA VALLADA DE UNOS 4 METROS CUADRADOS. MOTIVO: OBRAS CANAL ISABEL II.",
     "event_id": "tmadrid-39350",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "367d7f968d565eb1bc4ede3f874a380058125e8e"
   },
   {
@@ -28,7 +28,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Virgen del Puerto a Paseo del Rey. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42921",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "a7cf9ea7be2e9db5a2da4e11c9faf25c68d44371"
   },
   {
@@ -44,7 +44,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Cuatro Caminos. Previsión de corte total en horario de 22:00 a 06:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42990",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "0ddd7b144c8ec52891d5b268a0482481d6300589"
   },
   {
@@ -60,7 +60,7 @@
     "end_ts_utc": "2025-12-31T22:00:00Z",
     "description": "A-5, entre el P.K. 5,200 y el P.K. 6. Corte carriles alternos en ambos sentidos. Motivo: Preparación fase 1D3. Del 30-septiembre al 03-octubre, horario nocturno 23-06 horas. Del 03-octubre al 31-diciembre horario 06-23 horas.",
     "event_id": "tmadrid-42729",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "30768e7fb77e27e06659046660bb32fa7b2cd29a"
   },
   {
@@ -76,7 +76,7 @@
     "end_ts_utc": "2025-10-24T16:00:00Z",
     "description": "Obras en calle Argente nº 33 entre la calle Puerto Alto y la calle Puerto de San Glorio",
     "event_id": "tmadrid-42819",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "609cdb49cdd69fa592befb883651b606aba289df"
   },
   {
@@ -92,7 +92,7 @@
     "end_ts_utc": "2026-06-30T21:00:00Z",
     "description": "A-5 (entre el P.K. 4,45 y el P.K. 4,8 en ambos sentidos) y enlace de Batán-Carlina-Villagarcía. Desvío de tráfico por calzada sur o antigua entrada.",
     "event_id": "tmadrid-41909",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "5355f8fa85d37e4a327970b2196ca333b7a25ce2"
   },
   {
@@ -108,7 +108,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de plaza Castilla. Previsión de corte carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42945",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "0a12a57613590c769e152b60383e3f8a7d43fec6"
   },
   {
@@ -124,7 +124,7 @@
     "end_ts_utc": "2025-12-31T05:00:00Z",
     "description": "A-5, entre el P.K. 5,7 y el P.K. 5,4 en ambos sentidos. Corte de carriles alternos. Motivo: Preparación fase 1C3. (Horario nocturno de 23:30 hasta las 06:00 horas).",
     "event_id": "tmadrid-42000",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "4f086c798f6f789723d854aa4c8a6de378c238db"
   },
   {
@@ -140,7 +140,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Costa Rica.  Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42979",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "f2560c7e397b8dced4911eed90f7dd1b8cd4778b"
   },
   {
@@ -156,7 +156,7 @@
     "end_ts_utc": "2024-06-27T11:58:27Z",
     "description": "PL. LIMA – Pº CASTELLANA, CORTADOS LOS CARRILES SENTIDO NORTE HABILITANDO 2 CARRILES EN SENTIDO CONTRARIO. MOTIVO: OBRAS DE APARCAMIENTO Y METRO.",
     "event_id": "tmadrid-36675",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "475acd089b19ab7f41eb8ecd530709c79f45aa8e"
   },
   {
@@ -172,7 +172,7 @@
     "end_ts_utc": "2025-10-24T21:59:00Z",
     "description": "Obras en la calle Jesús del Pino",
     "event_id": "tmadrid-42547",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "ea8685489baa29e17d776edbf5fa6e8064e00885"
   },
   {
@@ -188,7 +188,7 @@
     "end_ts_utc": "2025-12-05T17:00:00Z",
     "description": "CALLE SOLEDAD CAZORLA entre calle Rafael Finat y calle Valle Inclán. Corte de circulación. Motivo: OBRAS PARA RENOVACIÓN",
     "event_id": "tmadrid-39893",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "cacf2a3bc285e8bf9a1a5c11ec57766fce4a48b8"
   },
   {
@@ -204,7 +204,7 @@
     "end_ts_utc": "2025-12-31T22:00:00Z",
     "description": "A-5, entre P.K. 5.600 y el P.K. 6.300. Corte nocturno (Noche 13-14 julio 23 - 06 horas) de carriles alternos  en ambos sentidos. Corte permanente (14/julio al 31/dic de 06 a 23 horas) para nuevo desvío de calzada entre c/ Padre Piquer y c/ Illescas. Motivo: Soterramiento A-5 (Preparación Fase 1B).",
     "event_id": "tmadrid-41526",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "ee9195f785c93dd2f0862c190996ac8754ded59c"
   },
   {
@@ -220,7 +220,7 @@
     "end_ts_utc": "2025-10-25T21:59:00Z",
     "description": "Calle Iriarte, entre la Calle de José Picón y la Calle de Béjar, asÌ como la Calle de Alonso Heredia. Motivo: renovación red de abastecimiento.",
     "event_id": "tmadrid-41707",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "fe5d822ee58a971a52187201fea199d24817e82e"
   },
   {
@@ -236,7 +236,7 @@
     "end_ts_utc": "2026-02-13T22:59:00Z",
     "description": "Obras en calle de Eulogio Pedrero, entre la Calle de la \nPeña Cavero y la Calle del Congosto.",
     "event_id": "tmadrid-42822",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "e3de3631e91a145f0129ffd8589f2f3bd20650e6"
   },
   {
@@ -252,7 +252,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de Bailén - Ferraz. Previsión de corte de carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42923",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "b0f607dcdb37905698a6f800a37d73b8febc37ba"
   },
   {
@@ -268,7 +268,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Dr. Esquerdo. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42932",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "d9fed906424c63d88529e73d073983012a76392f"
   },
   {
@@ -284,7 +284,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de Comercio. Previsión de corte carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42935",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "f31cf805ae2dd2168020165a64dce30e159e347c"
   },
   {
@@ -300,7 +300,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de República Argentina. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42942",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "dd69216094cd36ffe97608cf2c9df6785e09af0c"
   },
   {
@@ -316,7 +316,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de Alfonso XIII. Previsión de corte de carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42948",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "9bd17513ecc15482eb04d0535728150ec589f6ca"
   },
   {
@@ -332,7 +332,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de Pio XII. Previsión de corte carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42952",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "2ad123cf8acdd29b8497cd5bfd66ff9cf85cd7c8"
   },
   {
@@ -348,7 +348,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Pio XII. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42953",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "d28b3caf16296646941d884a46a02884af814adf"
   },
   {
@@ -364,7 +364,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de Cuatro Torres.  Previsión de corte de carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42970",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "8685475e299efb106caa2b127759f5b22b1d1006"
   },
   {
@@ -380,7 +380,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de Cristo Rey.  Previsión de corte de carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42972",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "32dcf76d7aa3bdff91ae28b2e48cb37031160568"
   },
   {
@@ -396,7 +396,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de Perales.  Previsión de corte de carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42976",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "d38c7fe15da697502beecd8c2d186a70815d2f12"
   },
   {
@@ -412,7 +412,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Camino de Perales.  Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42977",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "7308ddb41aa279a031e16c9534d36cbbeb1d2b35"
   },
   {
@@ -428,7 +428,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Comercio. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42936",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "a2beb67589f18a0f061be8d23e2c71674a9f5c0b"
   },
   {
@@ -444,7 +444,7 @@
     "end_ts_utc": "2025-10-24T21:59:00Z",
     "description": "Obras en calle Agatha Christie",
     "event_id": "tmadrid-42110",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "29baca3b22cf7345d80e36544bb3ecb3078cc644"
   },
   {
@@ -460,7 +460,7 @@
     "end_ts_utc": "2025-10-24T08:00:00Z",
     "description": "Túnel de Planetario. Previsión de corte de carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42925",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "d476dbb45ba7b0b67dd3d794f70e1a862becb2e5"
   },
   {
@@ -476,7 +476,7 @@
     "end_ts_utc": "2025-12-20T22:59:00Z",
     "description": "Calle Fereluz. Motivo: obras de abastecimiento del Canal de Isabel II",
     "event_id": "tmadrid-42109",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "cd97d551d69e5e919ea396001ee8387fd49cefcf"
   },
   {
@@ -492,7 +492,7 @@
     "end_ts_utc": "2025-11-30T17:00:00Z",
     "description": "PLAZA SANTA CRISTINA entre Pso. de Extremadura y calle San Crispin. Corte total y ocupación de la vía. Motivo: REFORMA Y MODERNIZACIÓN \nDE LA CTRS DE LÍNEA 6 (METRO PUERTA DEL ANGEL)",
     "event_id": "tmadrid-39507",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "bed8c72dbd4b76213325dfe40c35ef05a2194d82"
   },
   {
@@ -508,7 +508,7 @@
     "end_ts_utc": "2025-06-27T14:36:37Z",
     "description": "Av Albufera con Avd Democracia. Obras de en la via",
     "event_id": "tmadrid-41369",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "b57a1eb441590c422a8aaddc38f7f59b146c260d"
   },
   {
@@ -524,7 +524,7 @@
     "end_ts_utc": "2025-12-30T17:00:00Z",
     "description": "Obras en Gran Vía del Este - Aurora Boreal - Pirotecnia",
     "event_id": "tmadrid-42548",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "8ace3ffb7717bcc89b69003e8efd6518a8694358"
   },
   {
@@ -540,7 +540,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de Estrella Naos. Previsión de corte de carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42927",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "b7fcf56d7f95d9736c84cdab5de563bc831418c9"
   },
   {
@@ -556,7 +556,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Alfonso XII. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42934",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "f8c281a2474909d6360029155e4c5c6ba7a6f12f"
   },
   {
@@ -572,7 +572,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de O´Donnell bajo Dr. Esquerdo. Previsión de corte carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42937",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "04ee9cd5bd0ae119839df773537bee0494958114"
   },
   {
@@ -588,7 +588,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Trafalgar. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42959",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "58cafe4e4361df709a35998fe06e7d9dc53a8a84"
   },
   {
@@ -604,7 +604,7 @@
     "end_ts_utc": "2025-10-24T11:00:00Z",
     "description": "Túnel de Santa Cruz de Marcenado. revisión de corte total en horario de 10:00 a 13:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42962",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "5d74968903d5b3857e65562c2fe879e486379f3b"
   },
   {
@@ -620,7 +620,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Santa Cruz de Marcenado. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42963",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "5b9b5d0ea16c34df4243765d357aecc90401a614"
   },
   {
@@ -636,7 +636,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de Cuatro Caminos.  Previsión de corte de carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42966",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "c605ff8d147aa665963bffdb8daa28278c7b9e91"
   },
   {
@@ -652,7 +652,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Cuatro Caminos.  Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42967",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "a09660ab3d43cb7c573d9743ff85a265af8d0e3b"
   },
   {
@@ -668,7 +668,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Cristo Rey.  Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42973",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "65fc543c6c680c010b03013ca9752874896ff692"
   },
   {
@@ -684,7 +684,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de Costa Rica.  Previsión de corte de carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42978",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "c6287a80997394d9837c9941eeadcbfdf35e92a2"
   },
   {
@@ -700,7 +700,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de Valdebebas.  Previsión de corte carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42980",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "fb95c1e44ac377ff2d7bb4ace843350ddb09ff74"
   },
   {
@@ -716,7 +716,7 @@
     "end_ts_utc": "2025-09-04T05:29:48Z",
     "description": "AV. REINA VICTORIA / AV. PABLO IGLESIAS. CORTE DEL CARRIL IZQUIERDO EN AMBOS SENTIDOS. MOTIVO: TRABAJOS EN CALZADA.",
     "event_id": "tmadrid-42356",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "579dc71bda0f1ac6c7fcf4e33e983a23d6f8e082"
   },
   {
@@ -732,7 +732,7 @@
     "end_ts_utc": "2025-11-03T22:59:00Z",
     "description": "Obras en Av. de la Democracia nº 36.",
     "event_id": "tmadrid-42823",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "79f33ea368a70548bf4ffdde3abec19251dfaa8d"
   },
   {
@@ -748,7 +748,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de Alberto Aguilera -  Serrano Jover. Previsión de corte total en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42960",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "ac050fddee231b818dbb764032a53b69dc0d49d1"
   },
   {
@@ -764,7 +764,7 @@
     "end_ts_utc": "2026-01-23T22:59:00Z",
     "description": "Obras en calle de la Peña Nueva, entre la Calle de la Sierra de Montilla y la Calle de la Peña Sorrapia.",
     "event_id": "tmadrid-42821",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "52822f0cbbaab4eaf138349d46f85e210f5205f3"
   },
   {
@@ -780,7 +780,7 @@
     "end_ts_utc": "2025-11-24T22:59:00Z",
     "description": "Obras en Av. de la Democracia nº 19.",
     "event_id": "tmadrid-42824",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "1e666730ddbdaacf97b95152d300ae9c703bcfa1"
   },
   {
@@ -796,7 +796,7 @@
     "end_ts_utc": "2025-07-09T07:45:17Z",
     "description": "PASEO CASTELLANA / NUDO NORTE. CORTE TOTAL TRONCO CENTRAL EN AMBOS SENTIDOS. MOTIVO:OBRAS POR SOTERRAMIENTO DEL PASEO DE LA CASTELLANA.",
     "event_id": "tmadrid-41528",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "d711a7b11bd0bb23171ee155fc922dc8e2148f63"
   },
   {
@@ -812,7 +812,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de Azca. Previsión de corte de carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42956",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "37820e56b68a6e4ca5c000f34bf77021110a3c86"
   },
   {
@@ -828,7 +828,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel Atocha - Toledo - Mayor bajo Plaza Mayor,  Previsión de corte de carriles alternos en horario nocturno de 23:00 a 06:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42916",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "bb55905b39d4a7ccf1fe85fea99ede2f3cda3abd"
   },
   {
@@ -844,7 +844,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de Puerta de Toledo. Previsión de corte total en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42918",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "39b5d76222c4d7c32a5431b5cb06838c83b189fd"
   },
   {
@@ -860,7 +860,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de Carlos V. Previsión de corte total en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42919",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "19d7a3c3a4f86b0647b9de0f4ad678b260181ed8"
   },
   {
@@ -876,7 +876,7 @@
     "end_ts_utc": "2026-02-28T22:59:00Z",
     "description": "Calle Fernando El Católico entre la calle Andrés Mellado y la calle Hillarión Eslava. Motivo: Obras del Canal de Isabel II",
     "event_id": "tmadrid-42909",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "421b40345bd42ce2f190b9bc58ed904b20d9c41d"
   },
   {
@@ -892,7 +892,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de República Dominicana. Previsión de corte de carriles alternos en horario nocturno de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42946",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "2e766488391d9aa3af7c2c270c472c73b0ca65cb"
   },
   {
@@ -908,7 +908,7 @@
     "end_ts_utc": "2025-10-23T19:00:00Z",
     "description": "Tunel de Puerta de Toledo.  Previsión de corte de carriles alternos en horario nocturno de 16:00 a 21:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42982",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "7c43732cba30ea26b79780fc8ac4be579903dc05"
   },
   {
@@ -924,7 +924,7 @@
     "end_ts_utc": "2025-12-02T05:00:00Z",
     "description": "Pº Sta. María de la Cabeza, entre las calles Guadalete y Zujar. Obras ampliación L11 Metro.",
     "event_id": "tmadrid-38648",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "52ea17250bbaf2e2dba0fb592368a5226e03308f"
   },
   {
@@ -940,7 +940,7 @@
     "end_ts_utc": "2026-07-12T21:59:00Z",
     "description": "Pº Prado nº 30. Ocupación carril bus y acera sentido plaza Emperador Carlos V. Rehabilitación de edificio.",
     "event_id": "tmadrid-40915",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "c0428a6dac11fe7fe38a7b606786a49c96561939"
   },
   {
@@ -956,7 +956,7 @@
     "end_ts_utc": "2026-11-26T20:00:00Z",
     "description": "Incorporación desde c/ Seseña a la Ctra. de Boadilla. Motivo: Creación de carril izquierdo de giro.",
     "event_id": "tmadrid-39792",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "3b9d0179d09c37d3d8fbfb0205e7df501fc966ff"
   },
   {
@@ -972,7 +972,7 @@
     "end_ts_utc": "2025-12-23T22:59:00Z",
     "description": "CALLE VALDETORRES DE JARAMA, entre CALLE Angel Luis de la\nHerrán y calle Belianes. OBRAS DE SANEAMIENTO",
     "event_id": "tmadrid-40672",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "a5258584d42bac49b82885daaf8a201d3a7148c2"
   },
   {
@@ -988,7 +988,7 @@
     "end_ts_utc": "2024-08-20T06:04:50Z",
     "description": "PASEO DE LAS DELICIAS DOS CARRILES IZQUIERDOS CORTADOS ENTRE LA CALLE VIZCAYA Y LA CALLE CANARIAS, Y CALLE ÁNCORA ENTRE LAS CALLES RAFAEL DE RIEGO Y BATALLA DE SALADO. MOTIVO: OBRAS DE METRO.",
     "event_id": "tmadrid-37519",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "d49fe7a4cf8c741cb490124105c0827ebc14495b"
   },
   {
@@ -1004,7 +1004,7 @@
     "end_ts_utc": "2025-12-23T22:59:00Z",
     "description": "Obras en calle de Andrés Obispo nº34",
     "event_id": "tmadrid-42911",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "0ce84c2e12a1d118b4cb9d5333f5a1b4e739abaa"
   },
   {
@@ -1020,7 +1020,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de Sor Angela de la Cruz. Previsión de corte de carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42954",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "b2e4e63367a337bbf165aef6044185fcd1260281"
   },
   {
@@ -1036,7 +1036,7 @@
     "end_ts_utc": "2025-10-23T19:00:00Z",
     "description": "Túnel de Comercio. Previsión de corte de carriles alternos en horario de 16:00 a 21:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42985",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "b0c0f20486cc48305b4a272a7c94ef379afd5bf9"
   },
   {
@@ -1052,7 +1052,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Pio XII. Previsión de corte toal en horario de 22:00 a 06:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42988",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "32f54ae3997d9a6ce6758530b8c019b7e1216520"
   },
   {
@@ -1068,7 +1068,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Ventisquero de la Condesa.  Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42969",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "9781cb15aa109a596b0db673e7bf682930a89d1e"
   },
   {
@@ -1084,7 +1084,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Planetario. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42926",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "97434c8778c5723a1c13eac9bbfae0656a4e691d"
   },
   {
@@ -1100,7 +1100,7 @@
     "end_ts_utc": "2025-10-24T12:00:00Z",
     "description": "Túnel de Ríos Rosas.  Previsión de corte de carriles alternos en horario de 10:00 a 14:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42964",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "405f093a40225102c60225f3d8a2003ac72ce184"
   },
   {
@@ -1116,7 +1116,7 @@
     "end_ts_utc": "2026-01-31T22:59:00Z",
     "description": "Calle Riaño 13",
     "event_id": "tmadrid-42723",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "793564faa16f5c92e3d6d3c1930264b68ed7e8e4"
   },
   {
@@ -1132,7 +1132,7 @@
     "end_ts_utc": "2026-01-31T22:59:00Z",
     "description": "Calle Riaño 1",
     "event_id": "tmadrid-42724",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "793564faa16f5c92e3d6d3c1930264b68ed7e8e4"
   },
   {
@@ -1148,7 +1148,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Avenida de América bajo Cartagena. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42941",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "af8bd8534f4a523891a50884de9f3bb6f87eb10c"
   },
   {
@@ -1164,7 +1164,7 @@
     "end_ts_utc": "2025-10-23T19:00:00Z",
     "description": "Tunel de Estrella Naos.  Previsión de corte de carriles alternos en horario de 16:00 a 21:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42983",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "6d9b355296574ff474c41902694e428f1effd86a"
   },
   {
@@ -1180,7 +1180,7 @@
     "end_ts_utc": "2025-11-30T17:00:00Z",
     "description": "Calle de Carmen Bruguera desde el nº28 al nº36 entre la calle Marcelo \nUsera y la calle Mirasierra. Ocupación de la vía pública con cortes de circulación. Motivo: Izado rejillas metálicas.",
     "event_id": "tmadrid-39508",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "94ecd3579b0e63179a81c89ee35df609addf2221"
   },
   {
@@ -1196,7 +1196,7 @@
     "end_ts_utc": "2025-12-15T22:59:00Z",
     "description": "Obras en la calle del Río Matarraña, corte de circulación entre calle Alcalá y el nº7 de la calle Río Matarraña.",
     "event_id": "tmadrid-41911",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "6614267cd596b3cf7132990e443ab458a63652ed"
   },
   {
@@ -1212,7 +1212,7 @@
     "end_ts_utc": "2025-02-18T06:27:07Z",
     "description": "CORTE DE LOS CARRILES EN SUPERFICIE ENTRE LA PLAZA DEL CONDE DE CASAL Y LA A-3 EN AMBOS SENTIDOS. MOTIVO: OBRAS DE METRO E INTERCAMBIADOR.",
     "event_id": "tmadrid-39788",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "7bb5459bc6178a1a37566d3220d67d27ae69c2d7"
   },
   {
@@ -1228,7 +1228,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Carlos V. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42920",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "3dbc38bc0550cb7380cc43765fc628504948b23e"
   },
   {
@@ -1244,7 +1244,7 @@
     "end_ts_utc": "2025-10-24T11:30:00Z",
     "description": "Túnel de Avenida de América bajo Cartagena. Previsión de corte en carriles alternos en horario de 10:00 a 13:30 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42940",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "392b09cfa92896c479cd6a257d3c9a61bb23b662"
   },
   {
@@ -1260,7 +1260,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de plaza Castilla. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42944",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "9f2ae65dd9f68617fd8ee002c40376f94c518533"
   },
   {
@@ -1276,7 +1276,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Ríos Rosas.  Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42965",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "6cd576e3650e8747587aa0c17a452ae9b3d5e200"
   },
   {
@@ -1292,7 +1292,7 @@
     "end_ts_utc": "2025-12-19T22:59:00Z",
     "description": "Obras en calle de la Sierra Montilla entre la calle del Congosto y calle de la Peña Nueva",
     "event_id": "tmadrid-42820",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "82ace9e75ee56577567b8f1489c710d676a7cf3e"
   },
   {
@@ -1308,7 +1308,7 @@
     "end_ts_utc": "2025-12-22T22:59:00Z",
     "description": "Obras en Av. de la Democracia nº 21.",
     "event_id": "tmadrid-42825",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "318e7c5efd07ceadc3fb500dba958b15eb6c5818"
   },
   {
@@ -1324,7 +1324,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de Sinesio Delgado.  Previsión de corte de carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42974",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "030fb0f86f11bed048e5f1d3378d0cdb3ba23c28"
   },
   {
@@ -1340,7 +1340,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Valdebebas.  Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42981",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "d217e62ea635c1b75d80207319ecbb77753861e9"
   },
   {
@@ -1356,7 +1356,7 @@
     "end_ts_utc": "2025-10-24T21:59:00Z",
     "description": "Obras en calle de José Arcones Gil nº52",
     "event_id": "tmadrid-41923",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "3ae8feb0247fb07e030d9399f4a388e0dc053411"
   },
   {
@@ -1372,7 +1372,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de República Argentina. Previsión de corte de carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42943",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "da9b0a018e369ca4c26b1fb848121450af6612e7"
   },
   {
@@ -1388,7 +1388,7 @@
     "end_ts_utc": "2026-03-31T12:20:00Z",
     "description": "Marques de Jura Real / Baleares. Motivo: Obras metro linea 11",
     "event_id": "tmadrid-35448",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "6d79fbff99c4670dba20b4c44606364fbbc4c7d0"
   },
   {
@@ -1404,7 +1404,7 @@
     "end_ts_utc": "2025-12-31T22:00:00Z",
     "description": "A-5 (entre el P.K. 6 y el P.K. 4,8 en ambos sentidos). Desvío permanente de calzada y corte de carriles alternos. Motivo: Modificación del ramal de Boadilla, demoler new jersey central y preparar señalizacion horizontal. Horario nocturno de 23 a 06 horas.",
     "event_id": "tmadrid-41915",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "5ccd8e8c59beeae5dc9a1f409673832bf2c97e42"
   },
   {
@@ -1420,7 +1420,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de Dr. Esquerdo. Previsión de corte de carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42931",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "1a9011fcaa8af18553ad6f52f14c1be9f7cc4628"
   },
   {
@@ -1436,7 +1436,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de O´Donnell bajo Velázquez. Previsión de corte de carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42929",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "bcb4013459646568f8698fe060c8914ce01213dd"
   },
   {
@@ -1452,7 +1452,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de O´Donnell bajo Velázquez. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42930",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "c48bdf12eae5f9717a2410875f997dd449459744"
   },
   {
@@ -1468,7 +1468,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Sor Angela de la Cruz. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42955",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "7039c62f63919e8d5c8e9c7b2ba18dedda5c739c"
   },
   {
@@ -1484,7 +1484,7 @@
     "end_ts_utc": "2025-12-14T17:00:00Z",
     "description": "Avda. Ntra. Sra. Valvanera 119. Ocupación carril dcho. Obras metro de Madrid.",
     "event_id": "tmadrid-38642",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "51342cc2e4898a4f29b574858a9ce222723c7c3e"
   },
   {
@@ -1500,7 +1500,7 @@
     "end_ts_utc": "2026-10-26T17:15:00Z",
     "description": "Calle Sanchorreja: ocupación de la vía pública por obras. Construcción del paseo verde del suroeste (soterramiento de la A-5).",
     "event_id": "tmadrid-39349",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "b442992f4070a38b2d22f62a32ad89546b9f78ff"
   },
   {
@@ -1516,7 +1516,7 @@
     "end_ts_utc": "2025-10-24T11:00:00Z",
     "description": "Túnel de Alfonso XII. Previsión de corte sentidos alternos en horario de 10:00 a 13:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42933",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "dd6f0d9f70bf5694f70195b5f3ce7cf5dfbb5adf"
   },
   {
@@ -1532,7 +1532,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Manuel Becerra. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42939",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "c48bdf12eae5f9717a2410875f997dd449459744"
   },
   {
@@ -1548,7 +1548,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Alfonso XIII. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42949",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "96b2c510e37f05a9aee07bf10f7500d1d78fc2c5"
   },
   {
@@ -1564,7 +1564,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Cuatro Torres.  Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42971",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "5ebc4844a9e780f202544d3e0f17af230b3c55d2"
   },
   {
@@ -1580,7 +1580,7 @@
     "end_ts_utc": "2025-11-30T22:59:00Z",
     "description": "Calle Salud entre la calle Carmen y la plaza del Carmen. Motivo: Ejecución de pozo.",
     "event_id": "tmadrid-40997",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "3dcf508f40443e86ac07ed656cb4004f7868eb41"
   },
   {
@@ -1596,7 +1596,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de Mannuel Becerra. Previsión de corte de carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42938",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "5ca17b86b22e52edb952fad2e39713ecacfb5c2c"
   },
   {
@@ -1612,7 +1612,7 @@
     "end_ts_utc": "2025-10-24T21:59:00Z",
     "description": "calle Jesús del Pino 18 corte de circulación entre\nla calle de Real de Arganda y la calle del Puerto de Idiazábal.RENOVACION RED DE SANEAMIENTO",
     "event_id": "tmadrid-42545",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "0991469b90b378af0a7612d2f115b043a73c7b6c"
   },
   {
@@ -1628,7 +1628,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Azca. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42957",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "5b47ac3866201a35ed25d37cf3245ee09f4552bf"
   },
   {
@@ -1644,7 +1644,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Alberto Aguilera - Serrano Jover. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42961",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "cb68abbf4aa153e6a9fa079a81cdbbda91e88b8b"
   },
   {
@@ -1660,7 +1660,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de Ventisquero de la Condesa.  Previsión de corte de carriles alternos en horario  de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42968",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "b09c7886b7ab304e43a88cebdddb3acb15c1c657"
   },
   {
@@ -1676,7 +1676,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de República Dominicana. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42947",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "4545e386788e66726726dbd5d9c26eae95b7b22b"
   },
   {
@@ -1692,7 +1692,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de José María Soler. Previsión de corte de carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42950",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "2e766488391d9aa3af7c2c270c472c73b0ca65cb"
   },
   {
@@ -1708,7 +1708,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Puerta de Toledo. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42917",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "59fc97a9aa82bbd22dfd5157ac0f56de74ea8504"
   },
   {
@@ -1724,7 +1724,7 @@
     "end_ts_utc": "2025-12-31T22:00:00Z",
     "description": "A-5, entre P.K.3,700 y P.K. 4,400, \n\nNoche 16-17 octubre 23:00-06:00, corte de carriles alternos en ambas calzadas. Motivo: Trabajos de aglomerado y pintura. \n\n17-octubre 06:00 al 31-diciembre 23:00. Cambio de trazado (Fase 1D) en ambas calzadas",
     "event_id": "tmadrid-42914",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "06a2a0a763870b3d53b28a17f5468c15710fab31"
   },
   {
@@ -1740,7 +1740,7 @@
     "end_ts_utc": "2025-11-12T22:59:00Z",
     "description": "Obras calle de López de Hoyos",
     "event_id": "tmadrid-41913",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "36b9c454d879ea6cd1e79697ecd6a0fb91c28912"
   },
   {
@@ -1756,7 +1756,7 @@
     "end_ts_utc": "2025-10-30T22:59:00Z",
     "description": "PASEO DE LA ERMITA, 10 (entre la Avda. de la Osa Mayor y la\ncalle de Ana Teresa). TRABAJOS PARA LA RENOVACIÓN DE RED. CYII.",
     "event_id": "tmadrid-42236",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "ccb50e2127ff30c1d68fe6297751a74166d3510c"
   },
   {
@@ -1772,7 +1772,7 @@
     "end_ts_utc": "2025-10-23T19:00:00Z",
     "description": "Túnel de Alfonso XIII. Previsión de corte de carriles alternos en horario de 16:00 a 21:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42987",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "71b1590b68e69391f80dd0d86536ae9295318388"
   },
   {
@@ -1788,7 +1788,7 @@
     "end_ts_utc": "2025-10-23T19:00:00Z",
     "description": "Túnel de Valdebebas. Previsión de corte de carriles alternos en horario de 16:00 a 21:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42992",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "31ba9139f912d678afe6a110bcbfb306e1b13674"
   },
   {
@@ -1804,7 +1804,7 @@
     "end_ts_utc": "2025-11-28T13:00:00Z",
     "description": "Paseo de Recoletos - Salustiano Olózaga. Motivo: Carga y descarga de material.",
     "event_id": "tmadrid-39608",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "4e76be370cb94b2641a6935799e41e9779f702ed"
   },
   {
@@ -1820,7 +1820,7 @@
     "end_ts_utc": "2025-10-24T03:30:00Z",
     "description": "Vía de servicio A-42 - P.K. 5,500. Cortado carril derecho salida Tanatorio Sur. Motivo: Trabajos en pasarelas y demolición de acera en terciana. Horario nocturno: Entre las 23:00 y las 05:30 horas.",
     "event_id": "tmadrid-42731",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "81bde875a91c557117f8cf87be73dcd171d544ef"
   },
   {
@@ -1836,7 +1836,7 @@
     "end_ts_utc": "2025-10-24T11:00:00Z",
     "description": "Túnel de Atocha - Toledo - Mayor baja Plaza Mayor,  Previsión de corte de carriles alternos en horario de 10:00 a 13:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42915",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "01b8bf5904a6ca3e233740418bd67574b9976b03"
   },
   {
@@ -1852,7 +1852,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Sinesio Delgado.  Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42975",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "ff1b1c8409abf0887620f417aac2551f7ad38c8e"
   },
   {
@@ -1868,7 +1868,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de O´Donnel bajo Dr. Esquerdo. Previsión de cortetotal en horario de 22:00 a 06:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42986",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "8e7816ab564c9a4c1fc6e6298320bb69c4817ffc"
   },
   {
@@ -1884,7 +1884,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de José María Soler. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42951",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "4545e386788e66726726dbd5d9c26eae95b7b22b"
   },
   {
@@ -1900,7 +1900,7 @@
     "end_ts_utc": "2025-10-24T13:00:00Z",
     "description": "Túnel de Trafalgar. Previsión de corte de carriles alternos en horario de 10:00 a 15:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42958",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "73e40b4c699311f3060c4e63911f3d37f20ed18d"
   },
   {
@@ -1916,7 +1916,7 @@
     "end_ts_utc": "2026-01-31T22:59:00Z",
     "description": "Calle San Severo 18-24",
     "event_id": "tmadrid-42722",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "882d54e82c439618100945bd0ce83fe2537bf0d3"
   },
   {
@@ -1932,7 +1932,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Bailén - Ferraz. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42924",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "c633e721ad0fc5d351765c702a02e503dc7ff3f0"
   },
   {
@@ -1948,7 +1948,7 @@
     "end_ts_utc": "2025-10-24T04:00:00Z",
     "description": "Túnel de Estrella Naos. Previsión de corte total en horario nocturno de 23:00 a 6:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42928",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "7cfe3569f5a9e6f8ece1a85f562aac73f5b9b716"
   },
   {
@@ -1964,7 +1964,7 @@
     "end_ts_utc": "2025-10-23T19:00:00Z",
     "description": "Túnel de Azca. Previsión de corte de carriles alternos en horario de 16:00 a 21:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42989",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "ed2b5304fe464a0a47f0fb20cfe87ca1d7db4cec"
   },
   {
@@ -1980,7 +1980,7 @@
     "end_ts_utc": "2025-01-09T19:34:56Z",
     "description": "CONSTRUCCIÓN DEL PASEO VERDE DEL SUROESTE (SOTERRAMIENTO DE \nLA A-5 – PASEO DE EXTREMADURA), DESDE EL (PK 4+800) AL (PK 6+250)\nCalles Yebenes, Villamanin, Cebreros, Higueras, Villasandino y Alhambra.",
     "event_id": "tmadrid-39251",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "481ce40843af9635021bf924fa23f7edfea3da5e"
   },
   {
@@ -1996,7 +1996,7 @@
     "end_ts_utc": "2025-12-31T04:30:00Z",
     "description": "A-42, entre el P.K. 3.7 al P.K. 6. Corte de carriles alternos en ambos sentidos. Motivo: Trabajos de repintado de marcas viales y barrido de calzada. Horario nocturno: Desde las 23:00 hasta las 05:30 horas.",
     "event_id": "tmadrid-42114",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "654cab87bb298fd70b36f65cd34c0f7787cb3f11"
   },
   {
@@ -2012,7 +2012,7 @@
     "end_ts_utc": "2026-03-25T22:59:00Z",
     "description": "Obras en la calle Sembra",
     "event_id": "tmadrid-42363",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "fb297ec69c268b360f1693017f60339c502d03f5"
   },
   {
@@ -2028,7 +2028,7 @@
     "end_ts_utc": "2025-10-23T19:00:00Z",
     "description": "Túnel de Cuatro Torres. Previsión de corte de carriles alternos en horario de 16:00 a 21:00 horas por trabajos de mantenimiento.",
     "event_id": "tmadrid-42991",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:02Z",
     "fingerprint": "624813a402f956d843c07883344622af41f05b81"
   }
 ]

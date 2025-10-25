@@ -12,7 +12,7 @@
     "end_ts_utc": "2025-10-24T15:14:00Z",
     "description": "Se está ejecutando un trabajo en la red de distribución que permitirá mejorar la calidad del servicio que se presta en su zona. el corte de suministro ha sido anunciado mediante carteles. lamentamos las molestias ocasionadas.",
     "event_id": "agua-20251022-00017",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:01Z",
     "fingerprint": "c9b25a1b0aca1dd10a8d0e6bce022df2204f24b8"
   },
   {
@@ -28,7 +28,7 @@
     "end_ts_utc": "2026-02-20T13:15:00Z",
     "description": "Se está ejecutando un trabajo en la red de distribución que permitirá mejorar la calidad del servicio que se presta en su zona. el corte de suministro ha sido anunciado mediante carteles. lamentamos las molestias ocasionadas.",
     "event_id": "agua-20251022-00018",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:01Z",
     "fingerprint": "63a9c17d2e447f99e1457e6b382bd2efeeb83dd7"
   },
   {
@@ -44,7 +44,7 @@
     "end_ts_utc": "2026-01-14T11:30:00Z",
     "description": "Se está ejecutando un trabajo en la red de distribución que permitirá mejorar la calidad del servicio que se presta en su zona. el corte de suministro ha sido anunciado mediante carteles. lamentamos las molestias ocasionadas.",
     "event_id": "agua-20251022-00019",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:01Z",
     "fingerprint": "9be7bbf8a1f7b82a86135fca5ef38ed2bcce78f1"
   },
   {
@@ -60,7 +60,7 @@
     "end_ts_utc": "2026-01-14T10:30:00Z",
     "description": "Se está ejecutando un trabajo en la red de distribución que permitirá mejorar la calidad del servicio que se presta en su zona. el corte de suministro ha sido anunciado mediante carteles. lamentamos las molestias ocasionadas.",
     "event_id": "agua-20251022-00020",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:01Z",
     "fingerprint": "ea9ddd24dfca630e65dd4f5bf5c21e955143c43e"
   },
   {
@@ -76,7 +76,7 @@
     "end_ts_utc": "2025-10-23T13:00:00Z",
     "description": "Se va a ejecutar un trabajo en la red de distribución que permitirá mejorar  la calidad del servicio que se presta en su zona. se realizará un  corte de suministro  anunciado mediante carteles. lamentamos las molestias ocasionadas.",
     "event_id": "agua-20251022-00021",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:01Z",
     "fingerprint": "35a36f029c9396ae95da708e1a529b360636f7ac"
   },
   {
@@ -92,7 +92,7 @@
     "end_ts_utc": "2025-10-23T13:00:00Z",
     "description": "Se va a ejecutar un trabajo en la red de distribución que permitirá mejorar  la calidad del servicio que se presta en su zona. se realizará un  corte de suministro  anunciado mediante carteles. lamentamos las molestias ocasionadas.",
     "event_id": "agua-20251022-00022",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:01Z",
     "fingerprint": "629b3b7d229c70989a798cce8a80cf41846d0557"
   },
   {
@@ -108,7 +108,7 @@
     "end_ts_utc": "2025-10-24T16:00:00Z",
     "description": "Se va a ejecutar un trabajo en la red de distribución que permitirá mejorar  la calidad del servicio que se presta en su zona. se realizará un  corte de suministro  anunciado mediante carteles. lamentamos las molestias ocasionadas.",
     "event_id": "agua-20251022-00023",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:01Z",
     "fingerprint": "8ee92bda68c0fb864c183a6afedd6e654d99866b"
   },
   {
@@ -124,7 +124,7 @@
     "end_ts_utc": null,
     "description": "Se ha producido una incidencia en la red de distribución para cuya reparación se ha tenido que interrumpir el suministro. le comunicamos que esperamos tenerlo resuelto sobre las 09:30. lamentamos las molestias ocasionadas.",
     "event_id": "agua-20251022-00024",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:01Z",
     "fingerprint": "d5d4963724a8851388839b4e80ca59051c076fbc"
   },
   {
@@ -140,7 +140,7 @@
     "end_ts_utc": "2026-01-14T13:30:00Z",
     "description": "Se está ejecutando un trabajo en la red de distribución que permitirá mejorar la calidad del servicio que se presta en su zona. el corte de suministro ha sido anunciado mediante carteles. lamentamos las molestias ocasionadas.",
     "event_id": "agua-20251022-00025",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:01Z",
     "fingerprint": "07e9c1030e2f206333562accfccd3ea27c8e9870"
   },
   {
@@ -156,7 +156,7 @@
     "end_ts_utc": "2025-10-23T13:00:00Z",
     "description": "Se va a ejecutar un trabajo en la red de distribución que permitirá mejorar  la calidad del servicio que se presta en su zona. se realizará un  corte de suministro  anunciado mediante carteles. lamentamos las molestias ocasionadas.",
     "event_id": "agua-20251022-00026",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:01Z",
     "fingerprint": "8675e57a6023d1b4e905f3edcd7ed9ec66b3db46"
   },
   {
@@ -172,7 +172,7 @@
     "end_ts_utc": "2025-10-23T12:00:00Z",
     "description": "Se ha ejecutado un trabajo en la red de distribución que permitirá mejorar la calidad del servicio que se presta en su zona. se ha procedido a restablecer el suministro. lamentamos las molestias ocasionadas.",
     "event_id": "agua-20251022-00030",
-    "ingested_at_utc": "2025-10-22T22:23:56Z",
+    "ingested_at_utc": "2025-10-25T23:10:01Z",
     "fingerprint": "3884cd1878486cc518309b5f0d84b1c7244b5ad1"
   }
 ]

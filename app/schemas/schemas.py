@@ -5,7 +5,8 @@ from datetime import datetime
 class IncidentSchema(BaseModel):
     source: str = Field(description="Source system that reported the incident")
     category: str = Field(description="Type of the incident")
-    status: Literal["planned", "active", "unplanned"] = Field(description="Current status of the incident")
+    status: str = Field(description="Current status of the incident")
+    #status: Literal["planned", "active", "unplanned"] = Field(description="Current status of the incident")
     city: str = Field(description="City where the incident occurred")
     street: Optional[str] = Field(None, description="Street name where the incident is located")
     street_number: Optional[str] = Field(None, description="Street number of the incident location")
@@ -24,9 +25,10 @@ class IncidentSchema(BaseModel):
 class IncidentCreate(BaseModel):
     source: str = Field(..., max_length=50)
     category: str = Field(..., max_length=50)
-    status: Literal["planned", "active", "unplanned"] = Field(description="Current status of the incident")
+    status: str = Field(description="Current status of the incident")
+    #status: Literal["planned", "active", "unplanned"] = Field(description="Current status of the incident")
     city: str = Field(..., max_length=100)
-    street: Optional[str] = Field(None, max_length=255)
+    street: Optional[str] = Field(None, max_length=1000)
     street_number: Optional[str] = Field(None, max_length=20)
     lat: Optional[float] = None
     lon: Optional[float] = None

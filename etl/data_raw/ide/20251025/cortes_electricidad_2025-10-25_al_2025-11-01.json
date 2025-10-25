@@ -1,0 +1,191 @@
+[
+  {
+    "municipio": "Madrid",
+    "fecha": "30/10/2025",
+    "hora_inicio": "15:30",
+    "hora_fin": "21:12",
+    "via": "C/ Real de Arganda",
+    "numero": "206",
+    "fuente": "https://www.i-de.es/documents/1951486/1960840/Madrid.pdf/79b09d21-7309-1e84-6503-436f8901e830"
+  },
+  {
+    "municipio": "Madrid",
+    "fecha": "26/10/2025",
+    "hora_inicio": "13:15",
+    "hora_fin": "17:37",
+    "via": "Av. Alberto Alcocer",
+    "numero": "12 B",
+    "fuente": "https://www.i-de.es/documents/1951486/1960840/Madrid.pdf/79b09d21-7309-1e84-6503-436f8901e830"
+  },
+  {
+    "municipio": "Madrid",
+    "fecha": "29/10/2025",
+    "hora_inicio": "17:45",
+    "hora_fin": "21:55",
+    "via": "C/ General Ricardos",
+    "numero": "93",
+    "fuente": "https://www.i-de.es/documents/1951486/1960840/Madrid.pdf/79b09d21-7309-1e84-6503-436f8901e830"
+  },
+  {
+    "municipio": "Madrid",
+    "fecha": "26/10/2025",
+    "hora_inicio": "13:30",
+    "hora_fin": "15:21",
+    "via": "C/ Embajadores",
+    "numero": "147",
+    "fuente": "https://www.i-de.es/documents/1951486/1960840/Madrid.pdf/79b09d21-7309-1e84-6503-436f8901e830"
+  },
+  {
+    "municipio": "Madrid",
+    "fecha": "29/10/2025",
+    "hora_inicio": "15:30",
+    "hora_fin": "17:35",
+    "via": "C/ Doctor Esquerdo",
+    "numero": "53 B",
+    "fuente": "https://www.i-de.es/documents/1951486/1960840/Madrid.pdf/79b09d21-7309-1e84-6503-436f8901e830"
+  },
+  {
+    "municipio": "Madrid",
+    "fecha": "30/10/2025",
+    "hora_inicio": "12:15",
+    "hora_fin": "13:37",
+    "via": "C/ Toledo",
+    "numero": "249",
+    "fuente": "https://www.i-de.es/documents/1951486/1960840/Madrid.pdf/79b09d21-7309-1e84-6503-436f8901e830"
+  },
+  {
+    "municipio": "Madrid",
+    "fecha": "26/10/2025",
+    "hora_inicio": "11:00",
+    "hora_fin": "15:54",
+    "via": "C/ Sinesio Delgado",
+    "numero": "19 A",
+    "fuente": "https://www.i-de.es/documents/1951486/1960840/Madrid.pdf/79b09d21-7309-1e84-6503-436f8901e830"
+  },
+  {
+    "municipio": "Madrid",
+    "fecha": "25/10/2025",
+    "hora_inicio": "10:00",
+    "hora_fin": "13:03",
+    "via": "C/ Bravo Murillo",
+    "numero": "244",
+    "fuente": "https://www.i-de.es/documents/1951486/1960840/Madrid.pdf/79b09d21-7309-1e84-6503-436f8901e830"
+  },
+  {
+    "municipio": "Madrid",
+    "fecha": "27/10/2025",
+    "hora_inicio": "12:45",
+    "hora_fin": "18:21",
+    "via": "Av. Monforte de Lemos",
+    "numero": "159",
+    "fuente": "https://www.i-de.es/documents/1951486/1960840/Madrid.pdf/79b09d21-7309-1e84-6503-436f8901e830"
+  },
+  {
+    "municipio": "Madrid",
+    "fecha": "26/10/2025",
+    "hora_inicio": "12:00",
+    "hora_fin": "15:35",
+    "via": "C/ Bravo Murillo",
+    "numero": "188",
+    "fuente": "https://www.i-de.es/documents/1951486/1960840/Madrid.pdf/79b09d21-7309-1e84-6503-436f8901e830"
+  },
+  {
+    "municipio": "Madrid",
+    "fecha": "28/10/2025",
+    "hora_inicio": "14:30",
+    "hora_fin": "20:01",
+    "via": "C/ Minerva",
+    "numero": "124",
+    "fuente": "https://www.i-de.es/documents/1951486/1960840/Madrid.pdf/79b09d21-7309-1e84-6503-436f8901e830"
+  },
+  {
+    "municipio": "Madrid",
+    "fecha": "30/10/2025",
+    "hora_inicio": "06:30",
+    "hora_fin": "10:07",
+    "via": "C/ Padre Damián",
+    "numero": "203",
+    "fuente": "https://www.i-de.es/documents/1951486/1960840/Madrid.pdf/79b09d21-7309-1e84-6503-436f8901e830"
+  },
+  {
+    "municipio": "Madrid",
+    "fecha": "29/10/2025",
+    "hora_inicio": "09:45",
+    "hora_fin": "14:19",
+    "via": "Av. de Logroño",
+    "numero": "42",
+    "fuente": "https://www.i-de.es/documents/1951486/1960840/Madrid.pdf/79b09d21-7309-1e84-6503-436f8901e830"
+  },
+  {
+    "municipio": "Madrid",
+    "fecha": "30/10/2025",
+    "hora_inicio": "19:15",
+    "hora_fin": "21:41",
+    "via": "Av. de Rafael Ybarra",
+    "numero": "22",
+    "fuente": "https://www.i-de.es/documents/1951486/1960840/Madrid.pdf/79b09d21-7309-1e84-6503-436f8901e830"
+  },
+  {
+    "municipio": "Madrid",
+    "fecha": "31/10/2025",
+    "hora_inicio": "15:00",
+    "hora_fin": "16:01",
+    "via": "C/ Silvano",
+    "numero": "149",
+    "fuente": "https://www.i-de.es/documents/1951486/1960840/Madrid.pdf/79b09d21-7309-1e84-6503-436f8901e830"
+  },
+  {
+    "municipio": "Madrid",
+    "fecha": "26/10/2025",
+    "hora_inicio": "20:30",
+    "hora_fin": "00:53",
+    "via": "Av. Alberto Alcocer",
+    "numero": "69",
+    "fuente": "https://www.i-de.es/documents/1951486/1960840/Madrid.pdf/79b09d21-7309-1e84-6503-436f8901e830"
+  },
+  {
+    "municipio": "Madrid",
+    "fecha": "25/10/2025",
+    "hora_inicio": "15:00",
+    "hora_fin": "16:59",
+    "via": "C/ Luchana",
+    "numero": "181",
+    "fuente": "https://www.i-de.es/documents/1951486/1960840/Madrid.pdf/79b09d21-7309-1e84-6503-436f8901e830"
+  },
+  {
+    "municipio": "Madrid",
+    "fecha": "31/10/2025",
+    "hora_inicio": "11:45",
+    "hora_fin": "16:36",
+    "via": "C/ Camino de los Vinateros",
+    "numero": "238 A",
+    "fuente": "https://www.i-de.es/documents/1951486/1960840/Madrid.pdf/79b09d21-7309-1e84-6503-436f8901e830"
+  },
+  {
+    "municipio": "Madrid",
+    "fecha": "29/10/2025",
+    "hora_inicio": "19:30",
+    "hora_fin": "20:36",
+    "via": "C/ Serrano",
+    "numero": "14",
+    "fuente": "https://www.i-de.es/documents/1951486/1960840/Madrid.pdf/79b09d21-7309-1e84-6503-436f8901e830"
+  },
+  {
+    "municipio": "Madrid",
+    "fecha": "29/10/2025",
+    "hora_inicio": "02:15",
+    "hora_fin": "06:23",
+    "via": "C/ General Ricardos",
+    "numero": "51",
+    "fuente": "https://www.i-de.es/documents/1951486/1960840/Madrid.pdf/79b09d21-7309-1e84-6503-436f8901e830"
+  },
+  {
+    "municipio": "Madrid",
+    "fecha": "25/10/2025",
+    "hora_inicio": "10:45",
+    "hora_fin": "16:44",
+    "via": "C/ Valmojado",
+    "numero": "156",
+    "fuente": "https://www.i-de.es/documents/1951486/1960840/Madrid.pdf/79b09d21-7309-1e84-6503-436f8901e830"
+  }
+]

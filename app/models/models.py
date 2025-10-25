@@ -30,7 +30,7 @@ class Incident(Base):
     __tablename__ = "fct_events"
     __table_args__ = (
         # CheckConstraint("source IN ('gas', 'ayto', 'ide', 'canal')"),
-        CheckConstraint("status IN ('planned', 'active', 'unplanned')"),
+        # CheckConstraint("status IN ('planned', 'active', 'unplanned')"),
         # CheckConstraint("category IN ('gas', 'electricity', 'water', 'road_works', 'road')"),
         {"schema": "analytics_analytics"},
     )
@@ -40,7 +40,7 @@ class Incident(Base):
     category = Column(String(15), nullable=False)
     status = Column(String(10), nullable=False)
     city = Column(String(100), nullable=False)
-    street = Column(String(255), nullable=True)
+    street = Column(String(1000), nullable=True)
     street_number = Column(String(20), nullable=True)
     lat = Column(Float, nullable=True)
     lon = Column(Float, nullable=True)

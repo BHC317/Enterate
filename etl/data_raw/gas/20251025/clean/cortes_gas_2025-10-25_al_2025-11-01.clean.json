@@ -8,12 +8,12 @@
     "street_number": "174",
     "lat": 40.416981466135,
     "lon": -3.703438029950204,
-    "start_ts_utc": "2025-10-28T06:38:45Z",
-    "end_ts_utc": "2025-10-28T08:18:56Z",
+    "start_ts_utc": "2025-10-31T07:24:10Z",
+    "end_ts_utc": "2025-10-31T09:04:21Z",
     "description": "Avería inesperada en la red de gas.",
     "event_id": "gas-next7-0001",
     "ingested_at_utc": "2025-10-25T23:10:03Z",
-    "fingerprint": "a69fab017b62b5ed278636f80820b3ead9270880"
+    "fingerprint": "d9e290a8153a254d30a4df4bedd507cf8801436a"
   },
   {
     "source": "gas",
@@ -24,12 +24,12 @@
     "street_number": "51",
     "lat": 40.41220529989436,
     "lon": -3.6771219207161536,
-    "start_ts_utc": "2025-10-24T05:55:45Z",
-    "end_ts_utc": "2025-10-24T10:20:14Z",
+    "start_ts_utc": "2025-10-27T06:41:10Z",
+    "end_ts_utc": "2025-10-27T11:05:39Z",
     "description": "Intervención programada en la red de gas.",
     "event_id": "gas-next7-0002",
     "ingested_at_utc": "2025-10-25T23:10:03Z",
-    "fingerprint": "a5c7b18b6379bc9614bf97ee3abfa87b75066bcb"
+    "fingerprint": "b14d6c4dbf615befc29a8abeb389bcd006cdd937"
   },
   {
     "source": "gas",
@@ -40,12 +40,12 @@
     "street_number": "109",
     "lat": 40.43972191799924,
     "lon": -3.736271147711173,
-    "start_ts_utc": "2025-10-28T23:11:45Z",
-    "end_ts_utc": "2025-10-29T04:25:09Z",
+    "start_ts_utc": "2025-10-31T23:57:10Z",
+    "end_ts_utc": "2025-11-01T05:10:34Z",
     "description": "Intervención programada en la red de gas.",
     "event_id": "gas-next7-0003",
     "ingested_at_utc": "2025-10-25T23:10:03Z",
-    "fingerprint": "5546457f8a8106a38c651978a7d5e45ab06f8e86"
+    "fingerprint": "f4a871946a6469d7a9eb8323bf722dc495914f0f"
   },
   {
     "source": "gas",
@@ -56,12 +56,12 @@
     "street_number": "68",
     "lat": 40.41231892714678,
     "lon": -3.6766550876341815,
-    "start_ts_utc": "2025-10-26T01:45:45Z",
-    "end_ts_utc": "2025-10-26T07:09:09Z",
+    "start_ts_utc": "2025-10-29T02:31:10Z",
+    "end_ts_utc": "2025-10-29T07:54:34Z",
     "description": "Intervención programada en la red de gas.",
     "event_id": "gas-next7-0004",
     "ingested_at_utc": "2025-10-25T23:10:03Z",
-    "fingerprint": "294544c9c48235fe110e596f4d6dfe333121a0f4"
+    "fingerprint": "6ae97221384402710d813dd4c35ae319cba83749"
   },
   {
     "source": "gas",
@@ -72,12 +72,12 @@
     "street_number": "148",
     "lat": 40.38537822059529,
     "lon": -3.6622549467257293,
-    "start_ts_utc": "2025-10-23T15:41:45Z",
-    "end_ts_utc": "2025-10-23T17:26:24Z",
+    "start_ts_utc": "2025-10-26T16:27:10Z",
+    "end_ts_utc": "2025-10-26T18:11:49Z",
     "description": "Incidente urgente en la red.",
     "event_id": "gas-next7-0005",
     "ingested_at_utc": "2025-10-25T23:10:03Z",
-    "fingerprint": "8c2f0d30a10d38a0dfbe806fe61cc86c8db71b43"
+    "fingerprint": "778190896dd7424bdd0ee33b5bccd2994a3f4ff9"
   },
   {
     "source": "gas",
@@ -88,12 +88,12 @@
     "street_number": "117",
     "lat": 40.41085932871588,
     "lon": -3.6773192761315325,
-    "start_ts_utc": "2025-10-29T06:18:45Z",
-    "end_ts_utc": "2025-10-29T07:36:56Z",
+    "start_ts_utc": "2025-11-01T07:04:10Z",
+    "end_ts_utc": "2025-11-01T08:22:21Z",
     "description": "Avería inesperada en la red de gas.",
     "event_id": "gas-next7-0006",
     "ingested_at_utc": "2025-10-25T23:10:03Z",
-    "fingerprint": "c8364915a5e5eca9aee4684e5078446c5584bebc"
+    "fingerprint": "9dff02eb0270eebf3406009b5df8a5c39b6a9d37"
   },
   {
     "source": "gas",
@@ -104,12 +104,12 @@
     "street_number": "44",
     "lat": 40.4400792437006,
     "lon": -3.738250959152596,
-    "start_ts_utc": "2025-10-28T20:04:45Z",
-    "end_ts_utc": "2025-10-28T22:21:53Z",
+    "start_ts_utc": "2025-10-31T20:50:10Z",
+    "end_ts_utc": "2025-10-31T23:07:18Z",
     "description": "Intervención programada en la red de gas.",
     "event_id": "gas-next7-0007",
     "ingested_at_utc": "2025-10-25T23:10:03Z",
-    "fingerprint": "5ca698937157aaf8effd86c8251773d5193497d8"
+    "fingerprint": "33e41dbaaf15fa769f98b976937063206e71b454"
   },
   {
     "source": "gas",
@@ -120,12 +120,12 @@
     "street_number": "59",
     "lat": 40.47582018320309,
     "lon": -3.579995340851911,
-    "start_ts_utc": "2025-10-28T15:37:45Z",
-    "end_ts_utc": "2025-10-28T20:22:03Z",
+    "start_ts_utc": "2025-10-31T16:23:10Z",
+    "end_ts_utc": "2025-10-31T21:07:29Z",
     "description": "Intervención programada en la red de gas.",
     "event_id": "gas-next7-0008",
     "ingested_at_utc": "2025-10-25T23:10:03Z",
-    "fingerprint": "96947e2d12b8e2af1d3cd25824c1ba440c5592b4"
+    "fingerprint": "a174eeb1781bc8136caa2082e97ac6aa71e6fd8b"
   },
   {
     "source": "gas",
@@ -136,12 +136,12 @@
     "street_number": "227 A",
     "lat": 40.40093540741035,
     "lon": -3.602440479334008,
-    "start_ts_utc": "2025-10-28T08:36:45Z",
-    "end_ts_utc": "2025-10-28T13:14:03Z",
+    "start_ts_utc": "2025-10-31T09:22:10Z",
+    "end_ts_utc": "2025-10-31T13:59:28Z",
     "description": "Intervención programada en la red de gas.",
     "event_id": "gas-next7-0009",
     "ingested_at_utc": "2025-10-25T23:10:03Z",
-    "fingerprint": "b5ca289cc79e00d4c6f4c9b691b442b076b2078a"
+    "fingerprint": "b48b175ddb6b7979b5d58ed5cc145a7909af5019"
   },
   {
     "source": "gas",
@@ -152,12 +152,12 @@
     "street_number": "93",
     "lat": 40.369790150425985,
     "lon": -3.6018618948252943,
-    "start_ts_utc": "2025-10-27T07:10:45Z",
-    "end_ts_utc": "2025-10-27T11:31:03Z",
+    "start_ts_utc": "2025-10-30T07:56:10Z",
+    "end_ts_utc": "2025-10-30T12:16:28Z",
     "description": "Intervención programada en la red de gas.",
     "event_id": "gas-next7-0010",
     "ingested_at_utc": "2025-10-25T23:10:03Z",
-    "fingerprint": "d7135d6e04007213fe220e13e1ec86678778ae4c"
+    "fingerprint": "a7e36080951374e5aa875b0c41cc28115d29bfb2"
   },
   {
     "source": "gas",
@@ -168,12 +168,12 @@
     "street_number": "109",
     "lat": 40.4004390692467,
     "lon": -3.6943164462865554,
-    "start_ts_utc": "2025-10-29T01:32:45Z",
-    "end_ts_utc": "2025-10-29T06:03:20Z",
+    "start_ts_utc": "2025-11-01T02:18:10Z",
+    "end_ts_utc": "2025-11-01T06:48:45Z",
     "description": "Intervención programada en la red de gas.",
     "event_id": "gas-next7-0011",
     "ingested_at_utc": "2025-10-25T23:10:03Z",
-    "fingerprint": "e292e98db8a74d1f50c5cbf6e46251bc74e80df2"
+    "fingerprint": "4956c1ddbc4a0510982b7aa6f875648d22857992"
   },
   {
     "source": "gas",
@@ -184,12 +184,12 @@
     "street_number": "227",
     "lat": 40.44016730075981,
     "lon": -3.737536152805681,
-    "start_ts_utc": "2025-10-26T23:06:45Z",
-    "end_ts_utc": "2025-10-27T03:59:43Z",
+    "start_ts_utc": "2025-10-29T23:52:10Z",
+    "end_ts_utc": "2025-10-30T04:45:09Z",
     "description": "Intervención programada en la red de gas.",
     "event_id": "gas-next7-0012",
     "ingested_at_utc": "2025-10-25T23:10:03Z",
-    "fingerprint": "8a356e5018740e291277ed247b719cb708ad5c20"
+    "fingerprint": "c6efd696b6e70736f9c4ec0f345bce357e318e9d"
   },
   {
     "source": "gas",
@@ -200,12 +200,12 @@
     "street_number": "249",
     "lat": 40.40631460752212,
     "lon": -3.653049488642621,
-    "start_ts_utc": "2025-10-24T12:23:45Z",
-    "end_ts_utc": "2025-10-24T18:12:40Z",
+    "start_ts_utc": "2025-10-27T13:09:10Z",
+    "end_ts_utc": "2025-10-27T18:58:05Z",
     "description": "Intervención programada en la red de gas.",
     "event_id": "gas-next7-0013",
     "ingested_at_utc": "2025-10-25T23:10:03Z",
-    "fingerprint": "153cb1051a44b3804171b49d211c8a2cca5cfab5"
+    "fingerprint": "70375b9a003902da0f5e76028f3ada1160600c3c"
   },
   {
     "source": "gas",
@@ -216,12 +216,12 @@
     "street_number": "96",
     "lat": 40.39545751612048,
     "lon": -3.744285494085478,
-    "start_ts_utc": "2025-10-29T18:55:45Z",
-    "end_ts_utc": "2025-10-30T01:21:54Z",
+    "start_ts_utc": "2025-11-01T19:41:10Z",
+    "end_ts_utc": "2025-11-02T02:07:19Z",
     "description": "Corte por trabajos coordinados con el Ayuntamiento.",
     "event_id": "gas-next7-0014",
     "ingested_at_utc": "2025-10-25T23:10:03Z",
-    "fingerprint": "c3d1e42b6e5148fa5e6352c420a55242dbaa353e"
+    "fingerprint": "9dfaa2f93339e14d01314e1e26d1be8a77fe853a"
   },
   {
     "source": "gas",
@@ -232,12 +232,12 @@
     "street_number": "225 B",
     "lat": 40.41802709921919,
     "lon": -3.704842190758648,
-    "start_ts_utc": "2025-10-27T08:54:45Z",
-    "end_ts_utc": "2025-10-27T09:58:15Z",
+    "start_ts_utc": "2025-10-30T09:40:10Z",
+    "end_ts_utc": "2025-10-30T10:43:41Z",
     "description": "Avería inesperada en la red de gas.",
     "event_id": "gas-next7-0015",
     "ingested_at_utc": "2025-10-25T23:10:03Z",
-    "fingerprint": "eb6bea7a9e298e944c5ab7935ea9a6a3808f5a24"
+    "fingerprint": "9ebde10411f0babcb09170d7a9a735127f14b944"
   },
   {
     "source": "gas",
@@ -248,12 +248,12 @@
     "street_number": "195",
     "lat": 40.39960304204608,
     "lon": -3.600860996709011,
-    "start_ts_utc": "2025-10-23T01:09:45Z",
-    "end_ts_utc": "2025-10-23T05:06:23Z",
+    "start_ts_utc": "2025-10-26T01:55:10Z",
+    "end_ts_utc": "2025-10-26T05:51:48Z",
     "description": "Intervención programada en la red de gas.",
     "event_id": "gas-next7-0016",
     "ingested_at_utc": "2025-10-25T23:10:03Z",
-    "fingerprint": "96958a982c06985342283e5c58ea089f90bd852a"
+    "fingerprint": "4c7a661c9c21d6f2a3fdea8d96ca8feb7fa7a30e"
   },
   {
     "source": "gas",
@@ -264,12 +264,12 @@
     "street_number": "238",
     "lat": 40.45961972427636,
     "lon": -3.705895395746441,
-    "start_ts_utc": "2025-10-25T15:18:45Z",
-    "end_ts_utc": "2025-10-25T21:44:20Z",
+    "start_ts_utc": "2025-10-28T16:04:10Z",
+    "end_ts_utc": "2025-10-28T22:29:45Z",
     "description": "Corte por trabajos coordinados con el Ayuntamiento.",
     "event_id": "gas-next7-0017",
     "ingested_at_utc": "2025-10-25T23:10:03Z",
-    "fingerprint": "c75adc665a65cdb32378301c7d27a537603983c1"
+    "fingerprint": "edd7468e3b738d59b230fd2c85a7f6b440de55ee"
   },
   {
     "source": "gas",
@@ -280,12 +280,12 @@
     "street_number": "64",
     "lat": 40.473952342248595,
     "lon": -3.5792467651261712,
-    "start_ts_utc": "2025-10-25T13:20:45Z",
-    "end_ts_utc": "2025-10-25T17:24:58Z",
+    "start_ts_utc": "2025-10-28T14:06:10Z",
+    "end_ts_utc": "2025-10-28T18:10:23Z",
     "description": "Intervención programada en la red de gas.",
     "event_id": "gas-next7-0018",
     "ingested_at_utc": "2025-10-25T23:10:03Z",
-    "fingerprint": "a6dd5b8e68c95ffebc52a473f417c82b5dea6390"
+    "fingerprint": "9cad8958f011c405318e011d4b7a8ed889179c64"
   },
   {
     "source": "gas",
@@ -296,12 +296,12 @@
     "street_number": "18 A",
     "lat": 40.51363854160102,
     "lon": -3.716516570600445,
-    "start_ts_utc": "2025-10-23T01:08:45Z",
-    "end_ts_utc": "2025-10-23T05:40:13Z",
+    "start_ts_utc": "2025-10-26T01:54:10Z",
+    "end_ts_utc": "2025-10-26T06:25:38Z",
     "description": "Intervención programada en la red de gas.",
     "event_id": "gas-next7-0019",
     "ingested_at_utc": "2025-10-25T23:10:03Z",
-    "fingerprint": "07d512a78b53846d85510d2228add9d5838e95f3"
+    "fingerprint": "2fe4a20cc437828200ed4edfe8fd8dc812be8494"
   },
   {
     "source": "gas",
@@ -312,12 +312,12 @@
     "street_number": "63",
     "lat": 40.475729987991066,
     "lon": -3.6424383603425525,
-    "start_ts_utc": "2025-10-24T15:31:45Z",
-    "end_ts_utc": "2025-10-24T20:25:21Z",
+    "start_ts_utc": "2025-10-27T16:17:10Z",
+    "end_ts_utc": "2025-10-27T21:10:46Z",
     "description": "Intervención programada en la red de gas.",
     "event_id": "gas-next7-0020",
     "ingested_at_utc": "2025-10-25T23:10:03Z",
-    "fingerprint": "3526bb7a741880f98beeee806c92d0ebcb5993c0"
+    "fingerprint": "57297589273cf9dc9d4dd5e6b8a0c664feeaa672"
   },
   {
     "source": "gas",
@@ -328,11 +328,11 @@
     "street_number": "173",
     "lat": 40.408184719005185,
     "lon": -3.656457549303692,
-    "start_ts_utc": "2025-10-25T11:49:45Z",
-    "end_ts_utc": "2025-10-25T15:41:50Z",
+    "start_ts_utc": "2025-10-28T12:35:10Z",
+    "end_ts_utc": "2025-10-28T16:27:15Z",
     "description": "Intervención programada en la red de gas.",
     "event_id": "gas-next7-0021",
     "ingested_at_utc": "2025-10-25T23:10:03Z",
-    "fingerprint": "048080f2e729c9fae5fc3541af0fbe40ee006808"
+    "fingerprint": "f257fd08991c1e03e81fb5e07ce77e032be76759"
   }
 ]
