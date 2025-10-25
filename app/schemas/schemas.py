@@ -1,10 +1,10 @@
 from typing import Optional, Literal, List
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, validator
 from datetime import datetime
 
 class IncidentSchema(BaseModel):
-    source: Literal["gas", "ayto", "ide", "canal"] = Field(description="Source system that reported the incident")
-    category: Literal["gas", "electricity", "water", "road_works", "road"] = Field(description="Type of the incident")
+    source: str = Field(description="Source system that reported the incident")
+    category: str = Field(description="Type of the incident")
     status: Literal["planned", "active", "unplanned"] = Field(description="Current status of the incident")
     city: str = Field(description="City where the incident occurred")
     street: Optional[str] = Field(None, description="Street name where the incident is located")
@@ -20,3 +20,30 @@ class IncidentSchema(BaseModel):
 
 
     model_config = {"from_attributes": True}
+
+class IncidentCreate(BaseModel):
+    source: str = Field(..., max_length=50)
+    category: str = Field(..., max_length=50)
+    status: Literal["planned", "active", "unplanned"] = Field(description="Current status of the incident")
+    city: str = Field(..., max_length=100)
+    street: Optional[str] = Field(None, max_length=255)
+    street_number: Optional[str] = Field(None, max_length=20)
+    lat: Optional[float] = None
+    lon: Optional[float] = None
+    start_ts_utc: datetime
+    end_ts_utc: Optional[datetime] = None
+    description: Optional[str] = None
+    event_id: Optional[str] = Field(None, max_length=100)
+
+    # Asegurar datetimes con TZ. Si vienen naïve, se asumen UTC.
+    @validator("start_ts_utc", "end_ts_utc", pre=True)
+    def ensure_tz(cls, v):
+        if v is None:
+            return v
+        if isinstance(v, str):
+            dt = datetime.fromisoformat(v.replace("Z", "+00:00"))
+        else:
+            dt = v
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt

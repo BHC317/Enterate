@@ -2,7 +2,7 @@ from sqlalchemy import TIMESTAMP, CheckConstraint, Column, Float, Integer, Strin
 from database import Base
 from pydantic import BaseModel, Field, conlist, validator, field_validator
 from typing import Literal, List, Optional
-from datetime import datetime
+from datetime import datetime, timezone
 from schemas.schemas import IncidentSchema
 
 class Customer(Base):
@@ -29,9 +29,9 @@ class VehicleInfo(BaseModel):
 class Incident(Base):
     __tablename__ = "fct_events"
     __table_args__ = (
-        CheckConstraint("source IN ('gas', 'ayto', 'ide', 'canal')"),
+        # CheckConstraint("source IN ('gas', 'ayto', 'ide', 'canal')"),
         CheckConstraint("status IN ('planned', 'active', 'unplanned')"),
-        CheckConstraint("category IN ('gas', 'electricity', 'water', 'road_works', 'road')"),
+        # CheckConstraint("category IN ('gas', 'electricity', 'water', 'road_works', 'road')"),
         {"schema": "analytics_analytics"},
     )
 
